@@ -1,5 +1,12 @@
+body{
+  @apply antialiased text-stBrown;
+  font-family: Montserrat, serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+}
 div.navicon{
-  @apply block w-5  relative mb-1 bg-stGreen;
+  @apply block w-8  relative mb-1 bg-stGreen rounded-3xl;
   transition: background .2s ease-out;
-  height: 2px;
+  height: 5px;
 }

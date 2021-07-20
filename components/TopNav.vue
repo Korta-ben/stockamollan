@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-between bg-stLightGreen py-8 px-7">
-    <div>
+  <div class="flex justify-between bg-stLightGreen py-8 px-7 fixed w-full">
+    <div class="font-bold text-stBrown uppercase text-xl leading-6">
       Stockamöllan
     </div>
     <nav class="flex flex-col">
@@ -13,7 +13,7 @@
         <div class="navicon navico3 ml-auto" />
       </div>
       <ul :class="{hidden : showMenu}" class="animate-fade-in-down">
-        <li v-for="(item, i) in menuItems" :key="i" class="text-right ">
+        <li v-for="(item, i) in menuItems" :key="i" class="text-right py-2">
           <NuxtLink
             :to="item.slug">
             {{ item.title }}

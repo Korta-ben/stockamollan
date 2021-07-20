@@ -32,8 +32,16 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-  ],
+    '@nuxtjs/google-fonts'
 
+  ],
+  googleFonts: {
+    families: {
+      Montserrat:
+        { wght: [100,200,300,400,500,600,700,800] },
+      Lora:  { wght: [100,200,300,400,500,600,700,800] },
+    }
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
