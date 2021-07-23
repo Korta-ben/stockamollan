@@ -5,8 +5,31 @@ body{
   font-size: 15px;
   line-height: 22px;
 }
+.lora{
+  font-family: Lora, serif;
+}
 div.navicon{
   @apply block w-8  relative mb-1 bg-stGreen rounded-3xl;
   transition: background .2s ease-out;
   height: 5px;
+}
+.maplink{
+  @apply bg-stGreen absolute right-0 float-right rounded-bl-full bg-no-repeat bg-center;
+  background-image: url("http://stockamollan.local/wp-content/uploads/2021/07/streamline-icon-maps-pin-1@140x140-kopia-1.svg") ;
+  margin-top:91px;
+  width: 106px;
+  height: 96px;
+}
+/*header card*/
+.header-home{
+  padding-top:91px;
+  padding-bottom: 86px;
+}
+.header-bg{
+  @apply bg-no-repeat bg-bottom;
+  width:155px;
+  height: 536px;
+}
+.header-home p{
+  @apply py-5;
 }
