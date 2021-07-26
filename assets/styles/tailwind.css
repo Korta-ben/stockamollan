@@ -33,3 +33,13 @@ div.navicon{
 .header-home p{
   @apply py-5;
 }
+/* Vandringslederna */
+.accessibility-icon{
+  @apply bg-no-repeat bg-center inline-block w-6 h-6 mx-2;
+}
+.wheelchair{
+    background-image: url('~/assets/images/wheelchair.svg');
+}
+.stroller {
+  background-image: url('~/assets/images/stroller.svg');
+}
