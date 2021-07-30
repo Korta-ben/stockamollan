@@ -25,6 +25,10 @@ div.navicon{
   padding-top:91px;
   padding-bottom: 86px;
 }
+
+.page-top-padding{
+  padding-top:91px;
+}
 .header-bg{
   @apply bg-no-repeat bg-bottom;
   width:155px;
@@ -38,8 +42,31 @@ div.navicon{
   @apply bg-no-repeat bg-center inline-block w-6 h-6 mx-2;
 }
 .wheelchair{
-    background-image: url('~/assets/images/wheelchair.svg');
+  mask-image: url('~/assets/images/wheelchair.svg');
+  -webkit-mask-image: url('~/assets/images/wheelchair.svg');
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
 .stroller {
-  background-image: url('~/assets/images/stroller.svg');
+  mask-image: url('~/assets/images/stroller.svg');
+  -webkit-mask-image: url('~/assets/images/stroller.svg');
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  /*background-image: url('~/assets/images/stroller.svg');*/
+}
+
+/*landmarks header custom styles*/
+.landmark-custom{
+  height: 264px;
+}
+.landmark-header-overlay{
+  background-image: url("~/assets/images/landmark-header-foreground.svg");
+}
+
+.mapboxgl-canvas{
+  @apply relative rounded-b-xl;
+}
+
+.mapboxgl-control-container{
+  @apply hidden;
 }

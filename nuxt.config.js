@@ -12,8 +12,9 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -29,7 +30,8 @@ export default {
   components: {
     dirs: [
       '~/components',
-      '~/components/blocks'
+      '~/components/blocks',
+      '~/components/landmarks'
     ]},
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
