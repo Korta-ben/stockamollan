@@ -1,20 +1,20 @@
 <template>
   <div>
-    <div class="flex justify-between bg-stLightGreen py-8 px-7 fixed w-full z-10">
+    <div class="flex justify-between bg-stLightGreen py-8 px-7 fixed w-full z-20">
       <div class="font-bold text-stBrown uppercase text-xl leading-6">
-        Stockamöllan
+        <NuxtLink to="/">Stockamöllan</NuxtLink>
       </div>
       <nav class="flex flex-col">
         <div
-          class="md:hidden"
+          class="lg:hidden"
           @click="showMenu = !showMenu"
         >
           <div class="navicon navico1 ml-auto" />
           <div class="navicon navico2 ml-auto" />
           <div class="navicon navico3 ml-auto" />
         </div>
-        <ul :class="{hidden : showMenu}" class="animate-fade-in-down">
-          <li v-for="(item, i) in menuItems" :key="i" class="text-right py-2">
+        <ul :class="{hidden : showMenu}" class="animate-fade-in-down lg:block">
+          <li v-for="(item, i) in menuItems" :key="i" class="text-right  font-medium text-xl py-2 lg:inline lg:px-2">
             <NuxtLink
               :to="item.slug">
               {{ item.title }}
@@ -23,7 +23,7 @@
         </ul>
       </nav>
     </div>
-    <div class="maplink">
+    <div class="maplink lg:hidden">
 
     </div>
   </div>

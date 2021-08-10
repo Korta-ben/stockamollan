@@ -1,10 +1,6 @@
 <template>
-  <div>
-    <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
-      Vandringslederna
-    </h2>
+  <div class="flex flex-col md:flex-row md:flex-wrap">
     <TheRouteBlock v-for="trail in trails" :key="trail.id" :trailInfo="trail"/>
-
   </div>
 </template>
 
@@ -14,13 +10,10 @@ import axios from "axios";
 export default {
   data(){
     return{
-      trails:[]
+      trails:this.$store.getters.getHikingTrails,
     }
   },
-  async fetch () {
-    const { data } = await axios.get('http://stockamollan.local/wp-json/wp/v2/vandringslederna')
-    this.trails = data
-  },
+
 
 }
 </script>

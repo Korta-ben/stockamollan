@@ -1,5 +1,5 @@
 <template>
-  <div  class="px-7 mb-14">
+  <div  class="px-7 mb-14 md:w-1/2 lg:w-1/3">
     <h3 class="font-medium text-xl leading-6 text-stBrown mb-5">
       <span class="w-4 h-4 mr-4  rounded-full inline-block" :class="trailInfo.acf.colour.value"> </span>
       {{ trailInfo.title.rendered}}
@@ -11,9 +11,7 @@
       </span>
       <ul class="flex">
         <li  v-for="icon in trailInfo.acf.accessibility">
-          <span class="accessibility-icon bg-stBrown" :class="icon">
-
-          </span>
+          <span class="accessibility-icon bg-stBrown" :class="icon"></span>
         </li>
       </ul>
     </div>

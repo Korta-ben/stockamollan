@@ -17,6 +17,9 @@ module.exports = {
 
     },
     extend: {
+      screens: {
+        'dxl': '1440px',
+      },
       keyframes: {
         'fade-in-down': {
           '0%': {

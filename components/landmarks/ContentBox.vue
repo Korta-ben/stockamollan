@@ -1,11 +1,9 @@
 <template>
   <section>
-    <div class="grid grid-cols-1 md:grid-cols-2 px-7 pb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 px-7 pb-12 overflow-hidden">
       <div>
         <h2 class="font-medium text-xl leading-6 pb-5" v-html="contentBoxData.heading"></h2>
-        <p v-html="contentBoxData.content" class="text-sm leading-5 leading-5 pb-12">
-
-        </p>
+        <div v-html="contentBoxData.content" class="text-sm leading-5  pb-12 "></div>
       </div>
       <div>
         <vue-masonry-wall :items="items" :options="options"  >
@@ -18,12 +16,6 @@
         </vue-masonry-wall>
       </div>
 
-<!--      <div class="pb-12 grid grid-cols-2 gap-2">-->
-<!--        <div v-for="gridMedia in contentBoxData.media" :key="gridMedia.id" :class="gridMedia.info"-->
-<!--             class="">-->
-<!--          <img :src="gridMedia.Select"  class="w-full " >-->
-<!--        </div>-->
-<!--      </div>-->
 
     </div>
   </section>

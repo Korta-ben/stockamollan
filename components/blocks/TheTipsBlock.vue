@@ -1,10 +1,10 @@
 <template>
-  <div class="pt-12 pb-16 bg-stGreen bg-opacity-80">
+  <div class="pt-12 pb-20 tipslgbg lg:max-w-xl lg:px-16 bg-cover bg-no-repeat bg-right">
     <h3 class="pt-0.5 text-stCream font-medium text-3xl text-center">
       <img src="~/assets/images/tips.svg"  class="inline-block"/>
       {{ tipCard.title }}
     </h3>
-    <div v-html="tipCard.body" class="text-center px-7 pt-5 text-stCream text-lg pb-32">
+    <div v-html="tipCard.body" class="text-center  px-7 lg:px-20 pt-5 text-stCream text-lg pb-32">
 
     </div>
     <div v-html="tipCard.button_text"

@@ -13,6 +13,13 @@ div.navicon{
   transition: background .2s ease-out;
   height: 5px;
 }
+.siteMaxWidth{
+  @apply  m-auto;
+ max-width: 1440px
+}
+.tipslgbg{
+  background-image: url("http://stockamollan.local/wp-content/uploads/2021/08/Vector-1-1.svg");
+}
 .maplink{
   @apply bg-stGreen absolute right-0 float-right rounded-bl-full bg-no-repeat bg-center;
   background-image: url("http://stockamollan.local/wp-content/uploads/2021/07/streamline-icon-maps-pin-1@140x140-kopia-1.svg") ;
@@ -25,7 +32,6 @@ div.navicon{
   padding-top:91px;
   padding-bottom: 86px;
 }
-
 .page-top-padding{
   padding-top:91px;
 }
@@ -54,6 +60,13 @@ div.navicon{
   -webkit-mask-repeat: no-repeat;
   /*background-image: url('~/assets/images/stroller.svg');*/
 }
+.distance {
+  mask-image: url('~/assets/images/distance.svg');
+  -webkit-mask-image: url('~/assets/images/distance.svg');
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  /*background-image: url('~/assets/images/stroller.svg');*/
+}
 
 /*landmarks header custom styles*/
 .landmark-custom{
@@ -62,11 +75,62 @@ div.navicon{
 .landmark-header-overlay{
   background-image: url("~/assets/images/landmark-header-foreground.svg");
 }
-
 .mapboxgl-canvas{
   @apply relative rounded-b-xl;
 }
-
 .mapboxgl-control-container{
   @apply hidden;
+}
+.tipIcon{
+  mask-image: url('~/assets/images/tips.svg');
+  -webkit-mask-image: url('~/assets/images/tips.svg');
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 20px;
+}
+.slider-width{
+  max-width: 434px;
+}
+.tipslgbg{
+  @apply bg-stGreen bg-opacity-80;
+  background-image: unset;
+}
+.content-paddding{
+  padding-left: 27px;
+  padding-right: 27px;
+}
+.insert-spacer-arrow::after{
+  content:"";
+  height: 50%;
+  border: black solid 2px;
+}
+@screen  md{
+  .header-bg{
+    @apply bg-no-repeat bg-bottom w-2/3;
+
+  }
+
+
+}
+
+@screen lg{
+
+  .tipslgbg{
+    background-color: unset;
+    background-image: url("http://stockamollan.local/wp-content/uploads/2021/08/Vector-1-1.svg");
+  }
+  .mapboxgl-canvas{
+    @apply rounded-bl-none rounded-r-2xl;
+  }
+}
+
+@responsive {
+    .page-header-height{
+      height:414px
+    }
+  .trails-wedgit{
+    top: 45%;
+  }
+
+
 }

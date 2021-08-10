@@ -1,13 +1,48 @@
 <template>
-  <main>
+  <main class="siteMaxWidth">
 <!--  header index -->
     <section class="header-home">
       <HeaderCard :cardInfo="headerCard"/>
     </section>
 
+<!--    landmark slider-->
+    <section class="px-7 pb-24">
+      <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
+        Sevärdheter
+      </h2>
+
+      <VueSlickCarousel v-bind="sliderSettings">
+<!--        <TheLandmarkSlider v-for="landmark in landmarks" :key="landmark.id"  :landmark="landmark" />-->
+        <div class="flex flex-row px-5" v-for="landmark in landmarks"
+             :key="landmark.id">
+          <div class=" flex  slider-width "  >
+            <div class=" bg-center bg- bg-top w-1/2 rounded-l-xl object-cover bg-no-repeat"  v-bind:style="{
+              'background-image':
+            'url(' +
+    landmark.acf.header_image + ')'
+    }" >
+<!--              <img :src="landmark.acf.header_image" class="object-cover  ">-->
+            </div>
+            <div class="py-7 px-6 w-1/2  bg-stLightGreen	rounded-r-xl">
+              <h2 v-html="landmark.title.rendered" class="pb-7 break-words"></h2>
+              <p v-html="landmark.acf.kannetecken" class="pb-7"></p>
+              <a href="#" class="flex justify-items-start justify-items-start">
+                <span  class="bg-stGreen tipIcon inline-block  w-5 h-5 mr-1.5 "> </span>
+                LÄS MER</a>
+            </div>
+          </div>
+
+        </div>
+      </VueSlickCarousel>
+
+
+    </section>
   <!-- Route Block appears here -->
     <section>
-      <Vandringslederna />
+      <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
+        Vandringslederna
+      </h2>
+        <Vandringslederna />
     </section>
 
 <!--    section for tips  -->
@@ -16,23 +51,104 @@
     }" class="bg-no-repeat bg-center bg-cover mt-10 mb-2">
       <TheTipsBlock :tipCard="tipCard" />
     </section>
-
-<!--    hitta hit -->
-    <section class="mt-20">
+<!--    section for hitta hit-->
         <TheHittaHit :hittaHitCard="hittaHitCard"/>
-    </section>
   </main>
 </template>
 
 <script>
 
 import axios from "axios";
-import TheTipsBlock from "../components/blocks/TheTipsBlock";
-import TheHittaHit from "../components/blocks/TheHittaHit";
+import TheLandmarkSlider from "../components/blocks/TheLandmarkSlider";
 
-
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 export default {
-  components: {TheHittaHit, TheTipsBlock},
+  data() {
+    return {
+      landmarks: this.$store.getters.getLandmarks,
+      sliderSettings: [
+        {
+
+          "dots": false,
+          "infinite": true,
+          "speed": 500,
+          "slidesToShow": 3,
+          "slidesToScroll": 1,
+          "initialSlide": 0,
+          "arrows":false,
+          "responsive": [
+
+            {
+              "breakpoint": 375,
+              "settings": {
+                "slidesToShow": 1,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 480,
+              "settings": {
+                "slidesToShow": 1,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 640,
+              "settings": {
+                "centerMode": true,
+                "slidesToShow": 1,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 768,
+              "settings": {
+                "centerMode": true,
+                "slidesToShow": 1,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 855,
+              "settings": {
+                "centerMode": false,
+                "slidesToShow": 2,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 1024,
+              "settings": {
+                "centerMode": true,
+                "slidesToShow": 2,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 1280,
+              "settings": {
+                "centerMode": true,
+                "slidesToShow": 2,
+                "slidesToScroll": 1
+              }
+            },
+            {
+              "breakpoint": 1536,
+              "settings": {
+                "centerMode": true,
+                "slidesToShow": 3,
+                "slidesToScroll": 1
+
+              }
+            },
+          ]
+        }
+
+    ]
+    }
+  },
+
   async asyncData() {
     const { data } = await axios.get(
       `http://stockamollan.local/wp-json/wp/v2/pages/53`
@@ -40,15 +156,16 @@ export default {
 
     let card = data.acf.card
 
+
+
     return {
       headerCard : card.filter(o => o.card_type == "HeaderCard")[0],
       tipCard: card.filter(o => o.card_type == "TipsCard")[0],
       hittaHitCard: card.filter(o => o.card_type == "HittaHitCard")[0]
     }
 
-    // console.log(HeaderCard)
-
   },
+
 
 
 }

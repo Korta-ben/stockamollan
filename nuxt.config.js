@@ -13,17 +13,19 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' }
+      { rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css' }
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~assets/styles/tailwind.css'
+    '~assets/styles/tailwind.css',
+    'vue-slick-carousel/dist/vue-slick-carousel.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: './plugins/vue-slick-carousel.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -31,7 +33,8 @@ export default {
     dirs: [
       '~/components',
       '~/components/blocks',
-      '~/components/landmarks'
+      '~/components/landmarks',
+      '~/components/sagner'
     ]},
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
