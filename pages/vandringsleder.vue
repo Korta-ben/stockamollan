@@ -35,32 +35,47 @@ export default {
   data() {
     return {
       // routeDetails: [],
-      access_token:'pk.eyJ1IjoiYXNoaXNoNjQiLCJhIjoiY2txcW41amY1MThlMzJwbnBxYXZpenBudSJ9.NbUAWVcMrsioL4v4Q2Ro9Q',
       map:{
 
       },
       trails:this.$store.getters.getHikingTrails,
 
+
     }
   },
 
+  created(){
 
+  },
 
 
   mounted() {
-    this.renderMap();
+    this.renderMap(this.$config.apiSecret);
     this.trails.forEach(o => this.addMapboxLayer(o));
       },
 
   methods:{
-    renderMap(){
-      mapboxgl.accessToken = this.access_token
+    renderMap(apiSecret){
+      mapboxgl.accessToken = apiSecret
       this.map = new mapboxgl.Map({
         container: 'map',
         style:'mapbox://styles/ashish64/cks04p2e41rsp18t34ohudpsb',
         zoom:13.5,
         center:[13.374228, 55.945831],
+        displayControlsDefault: false,
         })
+
+      this.map.addControl(
+        new mapboxgl.GeolocateControl({
+          positionOptions: {
+            enableHighAccuracy: true
+          },
+// When active the map will receive updates to the device's location as it changes.
+          trackUserLocation: true,
+// Draw an arrow next to the location dot to indicate which direction the device is heading.
+          showUserHeading: true
+        })
+      );
 
 
     },

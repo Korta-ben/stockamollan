@@ -78,9 +78,16 @@ div.navicon{
 .mapboxgl-canvas{
   @apply relative rounded-b-xl;
 }
-.mapboxgl-control-container{
+
+.mapboxgl-ctrl-top-left, .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
   @apply hidden;
 }
+.mapboxgl-ctrl-top-right
+  {
+      top:unset !important;
+      bottom: 0 !important;
+      right: 0 !important;
+  }
 .tipIcon{
   mask-image: url('~/assets/images/tips.svg');
   -webkit-mask-image: url('~/assets/images/tips.svg');

@@ -1,5 +1,14 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL,
+    apiSecret: process.env.API_SECRET
+  },
+  privateRuntimeConfig: {
+
+  },
+
   head: {
     title: 'stockamollan',
     htmlAttrs: {
@@ -27,6 +36,8 @@ export default {
   plugins: [
     { src: './plugins/vue-slick-carousel.js' }
   ],
+
+
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
