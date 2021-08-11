@@ -18,12 +18,6 @@ export default {
       landmarks:this.$store.getters.getLandmarks,
     }
   }
-  // async asyncData ({ params }) {
-  //   const { data } = await axios.get(
-  //     `http://stockamollan.local/wp-json/wp/v2/sevardheter/`
-  //   )
-  //   let landmarks = data
-  //   return { landmarks }
-  // }
+
 }
 </script>

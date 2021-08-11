@@ -11,7 +11,7 @@ export default {
 
   async asyncData ({ params }) {
     const { data } = await axios.get(
-      `http://stockamollan.local/wp-json/wp/v2/sagner?slug=${params.slug}`
+      `https://api.stockamollan.guide/wp-json/wp/v2/sagner?slug=${params.slug}`
     )
     console.log(data)
     return { data }

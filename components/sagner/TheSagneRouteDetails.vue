@@ -30,28 +30,7 @@ export default {
     }
   },
 
-  // data(){
-  //   return {
-  //     routeColours:[],
-  //     accessibilities:[]
-  //   }
-  // },
-  // async fetch (){
-  //   this.routeDetails = await fetch(
-  //     `http://stockamollan.local/wp-json/acf/v3/vandringslederna/${this.vandringslederna}`
-  //   ).then(res => res.json())
-  // },
-  // computed:{
-  //   colour() {
-  //     return this.routeDetails?.acf?.colour  || ''
-  //   },
-  //   loopDistance() {
-  //     return this.routeDetails?.acf?.distance || ''
-  //   },
-  //   accessibility() {
-  //     return this.routeDetails.acf?.accessibility || ''
-  //   }
-  // }
+
 }
 
 </script>

@@ -67,12 +67,11 @@ export default {
     }
   },
   mounted() {
-    this.createMap(),
-    this.loadStenbocksstenen()
+    this.createMap(this.$config.apiSecret)
   },
   methods:{
-    createMap(){
-      mapboxgl.accessToken = this.access_token
+    createMap(apiSecret){
+      mapboxgl.accessToken = apiSecret
       this.map = new mapboxgl.Map({
         container: 'map',
         style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu',
@@ -81,70 +80,7 @@ export default {
       })
     },
 
-    loadStenbocksstenen(){
-      this.map.on('load', () => {
-        this.map.addSource('route', {
-          'type': 'geojson',
-          'data': {
-            'type': 'Feature',
-            'properties': {
-              "title": "Stenbocksstenen"
-            },
-            'geometry': {
-              'type': 'LineString',
-              'coordinates': [
-                [13.375628, 55.9455],
-                [13.375528, 55.945585],
-                [13.375465, 55.945641],
-                [13.375406, 55.945693],
-                [13.37534, 55.945754],
-                [13.375261, 55.945829],
-                [13.375215, 55.945871],
-                [13.374635, 55.94628],
-                [13.374523, 55.946411],
-                [13.374571, 55.94648],
-                [13.374721, 55.946538],
-                [13.37488, 55.946622],
-                [13.375022, 55.946713],
-                [13.375104, 55.946756],
-                [13.375193, 55.946803],
-                [13.375379, 55.946842],
-                [13.37602, 55.946876],
-                [13.3766, 55.946893],
-                [13.376742, 55.946883],
-                [13.37729, 55.946986],
-                [13.377466, 55.947067],
-                [13.377478, 55.947204],
-                [13.377348, 55.947456],
-                [13.377212, 55.947654],
-                [13.377022, 55.948047],
-                [13.376942, 55.948268],
-                [13.376887, 55.948576],
-                [13.376787, 55.948694],
-                [13.376453, 55.948894],
-                [13.376095, 55.949156]
-              ]
-            }
-          }
-        });
-        this.map.addLayer({
-          'id': 'route',
-          'type': 'line',
-          'source': 'route',
-          'layout': {
-            'line-join': 'round',
-            'line-cap': 'round'
-          },
-          'paint': {
-            'line-color': '#47BC52',
-            'line-width': 2
-          }
-        });
-      });
 
-
-
-    }
   }
 }
 </script>

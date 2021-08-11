@@ -27,7 +27,7 @@ export default {
     }
   },
   async fetch () {
-    const { data } = await axios.get(`http://stockamollan.local/wp-json/wp/v2/layout_settings/22`)
+    const { data } = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/layout_settings/22`)
     this.footer = data.acf.footer
   },
 }

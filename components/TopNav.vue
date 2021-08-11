@@ -40,7 +40,7 @@ export default {
     }
   },
   async fetch () {
-    this.menuItems = await fetch('http://stockamollan.local/wp-json/wp/v2/menu')
+    this.menuItems = await fetch('https://api.stockamollan.guide/wp-json/wp/v2/menu')
       .then(res =>
         res.json()
       )

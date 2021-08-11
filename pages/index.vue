@@ -151,7 +151,7 @@ export default {
 
   async asyncData() {
     const { data } = await axios.get(
-      `http://stockamollan.local/wp-json/wp/v2/pages/53`
+      `https://api.stockamollan.guide/wp-json/wp/v2/pages/53`
     )
 
     let card = data.acf.card
