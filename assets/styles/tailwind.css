@@ -84,9 +84,11 @@ div.navicon{
 }
 .mapboxgl-ctrl-top-right
   {
-      top:unset !important;
-      bottom: 0 !important;
-      right: 0 !important;
+    top:unset !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    padding-bottom: 20px;
+    padding-right: 10px;
   }
 .tipIcon{
   mask-image: url('~/assets/images/tips.svg');
