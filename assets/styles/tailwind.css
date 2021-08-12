@@ -17,6 +17,8 @@ div.navicon{
   @apply  m-auto;
  max-width: 1440px
 }
+
+
 .tipslgbg{
   background-image: url("https://api.stockamollan.guide/wp-content/uploads/2021/08/Vector-1-1.svg");
 }
