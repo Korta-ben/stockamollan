@@ -18,11 +18,11 @@ div.navicon{
  max-width: 1440px
 }
 .tipslgbg{
-  background-image: url("http://stockamollan.local/wp-content/uploads/2021/08/Vector-1-1.svg");
+  background-image: url("https://api.stockamollan.guide/wp-content/uploads/2021/08/Vector-1-1.svg");
 }
 .maplink{
   @apply bg-stGreen absolute right-0 float-right rounded-bl-full bg-no-repeat bg-center;
-  background-image: url("http://stockamollan.local/wp-content/uploads/2021/07/streamline-icon-maps-pin-1@140x140-kopia-1.svg") ;
+  background-image: url("https://api.stockamollan.guide/wp-content/uploads/2021/07/streamline-icon-maps-pin-1@140x140-kopia-1.svg") ;
   margin-top:91px;
   width: 106px;
   height: 96px;
@@ -126,7 +126,7 @@ div.navicon{
 
   .tipslgbg{
     background-color: unset;
-    background-image: url("http://stockamollan.local/wp-content/uploads/2021/08/Vector-1-1.svg");
+    background-image: url("https://api.stockamollan.guide/wp-content/uploads/2021/08/Vector-1-1.svg");
   }
   .mapboxgl-canvas{
     @apply rounded-bl-none rounded-r-2xl;

@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-xs max-h-80 w-80 h-80 mb-8 flex items-end rounded-2xl"
+    <div class="max-w-xs max-h-80 w-80 h-80 mb-8 flex items-end rounded-2xl md:w-1/2"
          v-bind:style="{ 'background-image': 'url(' + story.acf.header_image + ')'
     }"
     >
