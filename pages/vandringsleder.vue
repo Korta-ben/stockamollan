@@ -97,7 +97,7 @@ export default {
           },
           'paint': {
             'line-color':layer.acf.hexcolour,
-            'line-width': 2,
+            'line-width': 3,
           }
         });
       });
