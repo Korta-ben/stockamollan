@@ -6,7 +6,7 @@
         <li
           class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5"
           v-for="trail in trails" :key="trail.id"  @click="updateLayerVisibility(trail)">
-          <span class="w-4 h-4 mr-4  rounded-full inline-block" :class="trail.acf.colour.value"> </span>
+          <span class="w-4 h-4 mr-4  rounded-full inline-block border-trlYellow" :class="trail.acf.colour.value"> </span>
           <span class="hidden md:inline-block">{{ trail.acf.colour.label }} slinga</span>
         </li>
       </ul>
