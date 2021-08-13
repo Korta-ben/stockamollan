@@ -18,6 +18,21 @@ div.navicon{
  max-width: 1440px
 }
 
+.bg-trlYellow {
+  background-color:#FBE159;
+}
+.bg-trlBlue {
+  background-color:#4302CF;
+}
+.bg-trlRed {
+  background-color:#EC3219;
+}
+.bg-trlGreen {
+  background-color:#47BC52;
+}
+.bg-trlSKy {
+  background-color:#00A7CC;
+}
 
 .tipslgbg{
   background-image: url("https://api.stockamollan.guide/wp-content/uploads/2021/08/Vector-1-1.svg");
