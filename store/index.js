@@ -33,6 +33,8 @@ export const actions = {
       const  hikingTrails  = await axios.get('https://api.stockamollan.guide/wp-json/wp/v2/vandringslederna')
       const  landmarks  = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/sevardheter/`)
       const stories  = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/sagner`)
+      // console.log(hikingTrails.data.sort( (a,b) => {a.acf.position - b.acf.position} )),
+      console.log(hikingTrails.data.sort( (a, b) => b.acf.position.localeCompare(a.acf.position) ))
 
       commit('setHikingTrails', hikingTrails.data);
       commit('setlandmarks', landmarks.data);

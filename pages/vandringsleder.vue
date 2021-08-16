@@ -3,6 +3,7 @@
     <main >
     <div class="py-3 absolute object-left trails-wedgit z-10">
       <ul>
+        <li class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5">Show all</li>
         <li
           class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5"
           v-for="trail in trails" :key="trail.id"  @click="updateLayerVisibility(trail)">
@@ -74,6 +75,7 @@ export default {
           trackUserLocation: true,
 // Draw an arrow next to the location dot to indicate which direction the device is heading.
           showUserHeading: true
+          // showUserLocation:true
         })
       );
 
