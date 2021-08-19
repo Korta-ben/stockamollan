@@ -1,9 +1,8 @@
 <template>
 
-    <main >
+  <main >
     <div class="py-3 absolute object-left trails-wedgit z-10">
       <ul>
-        <li class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5">Show all</li>
         <li
           class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5"
           v-for="trail in trails" :key="trail.id"  @click="updateLayerVisibility(trail)">
@@ -12,18 +11,10 @@
         </li>
       </ul>
     </div>
-
-
-      <div id="map"  class=" h-screen w-full ">
-
-      </div>
-
-
+    <div id="map"  class=" h-screen w-full ">
+    </div>
   </main>
-
-
 </template>
-
 
 <script>
 import mapboxgl from 'mapbox-gl'
@@ -53,7 +44,7 @@ export default {
   mounted() {
     this.renderMap(this.$config.apiSecret);
     this.trails.forEach(o => this.addMapboxLayer(o));
-      },
+  },
 
   methods:{
     renderMap(apiSecret){
@@ -64,7 +55,7 @@ export default {
         zoom:13.5,
         center:[13.374228, 55.945831],
         displayControlsDefault: false,
-        })
+      })
 
       const locateMe = new mapboxgl.GeolocateControl({
         positionOptions: {
@@ -79,8 +70,6 @@ export default {
       this.map.on('load', () => {
         locateMe.trigger();
       });
-
-
     },
 
     addMapboxLayer(layer){
@@ -110,8 +99,7 @@ export default {
 
     updateLayerVisibility(layerId){
       let layerStatus = this.map.getLayoutProperty(layerId.slug,'visibility');
-
-       layerStatus == "visible" ?  this.map.setLayoutProperty(layerId.slug, 'visibility',  'none') :
+      layerStatus === "visible" ?  this.map.setLayoutProperty(layerId.slug, 'visibility',  'none') :
         this.map.setLayoutProperty(layerId.slug, 'visibility',  'visible')
 
     },

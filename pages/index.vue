@@ -26,9 +26,11 @@
             <div class="py-7 px-6 w-1/2  bg-stLightGreen	rounded-r-xl">
               <h2 v-html="landmark.title.rendered" class="pb-7 break-words"></h2>
               <p v-html="landmark.acf.kannetecken" class="pb-7"></p>
-              <a href="#" class="flex justify-items-start justify-items-start">
+
+              <NuxtLink :to="{ name: 'sevardheter-slug', params: { slug: landmark.slug } }" class="flex justify-items-start justify-items-start">
                 <span  class="bg-stGreen tipIcon inline-block  w-5 h-5 mr-1.5 "> </span>
-                LÄS MER</a>
+                LÄS MER
+              </NuxtLink>
             </div>
           </div>
 

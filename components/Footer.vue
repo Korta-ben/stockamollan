@@ -1,20 +1,28 @@
 <template>
-  <footer class="bg-stGreen px-12 py-20">
-    <div>
-      <img src="~/assets/images/logo.png" class="m-auto">
-    </div>
-    <div v-for="item in footer" :key="item.id" class="text-center text-stCream mt-20" >
-      <h2 v-html="item.title" class="text-3xl leading-9 font-medium pb-3"></h2>
-      <div v-html="item.body">
+  <footer class="bg-stGreen px-12 py-20 ">
+    <div class="flex flex-col lg:flex-row gap-4 lg-flex-wrap justify-between items-center lg:items-start  siteMaxWidth">
+      <div class="lg:w-1/3 max-w-xs lg:order-2" >
+        <img :src="logo.logo" class="m-auto">
       </div>
-      <ul>
-        <li class="inline-flex py-16 mx-2.5"  v-for="social in item.social_media" >
-          <a :href="social.url">
-            <img :src="social.icon">
-          </a>
-        </li>
-      </ul>
+
+      <div class="text-center  text-stCream mt-20 lg:mt-0 lg:w-1/3 lg:text-left max-w-xs lg:order-1">
+        <h2 v-html="info.title" class="text-3xl leading-9 font-medium pb-3"></h2>
+        <div v-html="info.info_text"></div>
+      </div>
+
+      <div class="text-center text-stCream mt-20 lg:mt-0 lg:w-1/3 lg:text-left max-w-xs lg:order-3">
+        <h2 v-html="social.title" class="text-3xl leading-9 font-medium pb-3"></h2>
+        <div v-html="social.paragraph"></div>
+        <ul>
+          <li class="inline-flex py-16 mx-2.5"  v-for="sm in social.facebook" >
+            <a :href="sm.url">
+              <img :src="sm.icon">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+
   </footer>
 </template>
 <script>
@@ -23,12 +31,18 @@ import axios from "axios";
 export default {
   data () {
     return {
-      footer:[]
+      logo:[],
+      info:[],
+      social:[]
+
     }
   },
   async fetch () {
     const { data } = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/layout_settings/22`)
-    this.footer = data.acf.footer
+    this.logo = data.acf.new_footer.filter(o => o.acf_fc_layout === "logo")[0];
+    this.info = data.acf.new_footer.filter(o => o.acf_fc_layout === "footer_card")[0];
+    this.social = data.acf.new_footer.filter(o => o.acf_fc_layout === "social_media")[0];
+    // this.
   },
 }
 </script>

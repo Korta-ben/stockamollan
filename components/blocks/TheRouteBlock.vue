@@ -15,13 +15,13 @@
         </li>
       </ul>
     </div>
-    <div class="text-lg font-normal leading-5 mb-9">
-      <p v-html="trailInfo.content.rendered">
+    <div class="text-lg font-normal leading-5 mb-9" v-html="trailInfo.content.rendered">
 
-      </p>
     </div>
     <div class="bg-stGreen text-stCream uppercase font-medium text-sm leading-4 w-full py-4 text-center">
-      Sevärdheter på slingan
+      <NuxtLink :to="{name: 'vandringsleder-landmark', params:{landmark:trailInfo.slug}}" >
+        Sevärdheter på slingan
+      </NuxtLink>
     </div>
   </div>
 </template>

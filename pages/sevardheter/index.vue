@@ -17,7 +17,9 @@ export default {
     return {
       landmarks:this.$store.getters.getLandmarks,
     }
-  }
+  },
+
+
 
 }
 </script>

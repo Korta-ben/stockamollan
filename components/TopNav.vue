@@ -16,7 +16,7 @@
         <ul :class="{hidden : showMenu}" class="animate-fade-in-down lg:block">
           <li v-for="(item, i) in menuItems" :key="i" class="text-right  font-medium text-xl py-2 lg:inline lg:px-2">
             <NuxtLink
-              :to="item.slug">
+              :to="{name:item.slug}">
               {{ item.title }}
             </NuxtLink>
           </li>
