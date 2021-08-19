@@ -42,18 +42,14 @@
 export default {
   data() {
     return {
-      // landmarks:this.$store.getters.getLandmarks,
       trails:this.$store.getters.getHikingTrails,
 
     }
   },
 
   computed:{
-      // landmarks: this.allLandmarks.filter(o => o.slug === "sevardheter")
     landmarks(){
       return this.trails.filter(o => o.slug === this.$route.params.landmark)[0].acf?.sevardheter
-
-
     }
   }
 

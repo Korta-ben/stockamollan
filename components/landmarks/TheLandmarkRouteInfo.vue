@@ -11,7 +11,7 @@
 
       <ul class="flex">
         <li  v-for="icon in vandringslederna.accessibility" :key="icon.id">
-          <span class="accessibility-icon bg-stBrown " :class="icon">
+          <span class="accessibility-icon bg-stBrown lg:bg-stGreen " :class="icon">
           </span>
         </li>
       </ul>

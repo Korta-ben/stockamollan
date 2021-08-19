@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-stLightGreen">
     <div class="flex justify-between bg-stLightGreen py-8 px-7 fixed w-full z-20">
       <div class="font-bold text-stBrown uppercase text-xl leading-6">
         <NuxtLink to="/">Stockamöllan</NuxtLink>

@@ -31,6 +31,7 @@ export default {
 
       },
       trails:this.$store.getters.getHikingTrails,
+      landmarks:this.$store.getters.getLandmarks
 
 
     }
@@ -51,7 +52,8 @@ export default {
       mapboxgl.accessToken = apiSecret
       this.map = new mapboxgl.Map({
         container: 'map',
-        style:'mapbox://styles/ashish64/cks04p2e41rsp18t34ohudpsb',
+        // style:'mapbox://styles/ashish64/cks04p2e41rsp18t34ohudpsb',
+        style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu',
         zoom:13.5,
         center:[13.374228, 55.945831],
         displayControlsDefault: false,
@@ -93,6 +95,10 @@ export default {
           }
         });
       });
+
+    },
+    addMapboxMarker(){
+
 
     },
 
