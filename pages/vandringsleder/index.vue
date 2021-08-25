@@ -3,12 +3,24 @@
   <main >
     <div class="py-3 absolute object-left trails-wedgit z-10">
       <ul>
-        <li
-          class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5"
-          v-for="trail in trails" :key="trail.id"  @click="updateLayerVisibility(trail)">
-          <span class="w-4 h-4 mr-4  rounded-full inline-block border-trlYellow" :class="trail.acf.colour.value"> </span>
-          <span class="hidden md:inline-block">{{ trail.acf.colour.label }} slinga</span>
+
+        <li v-for="trail in trails" :key="trail.id"
+
+         >
+          <label
+            class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5"
+            :for="trail.id">
+            <input
+              type="checkbox"
+              :id="trail.id"
+              @click="updateLayerVisibility(trail);">
+            <span
+              class="w-4 h-4 mr-4  rounded-full inline-block border-trlYellow"
+              :class="trail.acf.colour.value"> </span>
+            <span class="hidden md:inline-block">{{ trail.acf.colour.label }} slinga</span>
+          </label>
         </li>
+
       </ul>
     </div>
     <div id="map"  class=" h-screen w-full ">
@@ -31,7 +43,8 @@ export default {
 
       },
       trails:this.$store.getters.getHikingTrails,
-      landmarks:this.$store.getters.getLandmarks
+      landmarks:this.$store.getters.getLandmarks,
+      isDisabled:false
 
 
     }
@@ -45,6 +58,7 @@ export default {
   mounted() {
     this.renderMap(this.$config.apiSecret);
     this.trails.forEach(o => this.addMapboxLayer(o));
+    this.addLandMarks();
   },
 
   methods:{
@@ -92,10 +106,54 @@ export default {
           'paint': {
             'line-color':layer.acf.hexcolour,
             'line-width': 3,
+            'line-dasharray': layer.acf.line_type === "true" ? [2, 2] : [1, 0],
           }
         });
       });
 
+    },
+
+    addLandMarks(){
+      this.map.on('load', () =>{
+        this.map.loadImage(
+          'https://api.stockamollan.guide/wp-content/uploads/2021/08/streamline-icon-landmarks-stone@48x48.svg',
+          (error, image) => {
+            if (error) throw error;
+
+// Add the image to the map style.
+            this.map.addImage('landmark-icon', image);
+
+// Add a data source containing one point feature.
+            this.map.addSource('landmark', {
+              'type': 'geojson',
+              'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                  {
+                    'type': 'Feature',
+                    'geometry': {
+                      'type': 'symbol',
+                      'coordinates': [13.375814,
+                        55.949088]
+                    }
+                  }
+                ]
+              }
+            });
+
+// Add a layer to use the image to represent the data.
+            this.map.addLayer({
+              'id': 'landmark',
+              'type': 'symbol',
+              'source': 'landmark', // reference the data source
+              'layout': {
+                'icon-image': 'landmark-icon', // reference the image
+
+              }
+            });
+          }
+        );
+      })
     },
     addMapboxMarker(){
 
@@ -104,9 +162,12 @@ export default {
 
 
     updateLayerVisibility(layerId){
+
       let layerStatus = this.map.getLayoutProperty(layerId.slug,'visibility');
       layerStatus === "visible" ?  this.map.setLayoutProperty(layerId.slug, 'visibility',  'none') :
         this.map.setLayoutProperty(layerId.slug, 'visibility',  'visible')
+      return layerStatus
+
 
     },
 

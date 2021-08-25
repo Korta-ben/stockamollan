@@ -162,3 +162,7 @@ div.navicon{
 
 
 }
+
+.trails-wedgit input:checked + label{
+  opacity: 7
+}
