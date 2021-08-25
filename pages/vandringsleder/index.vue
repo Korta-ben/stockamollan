@@ -58,7 +58,7 @@ export default {
   mounted() {
     this.renderMap(this.$config.apiSecret);
     this.trails.forEach(o => this.addMapboxLayer(o));
-    this.addLandMarks();
+    // this.addLandMarks();
   },
 
   methods:{
@@ -66,8 +66,8 @@ export default {
       mapboxgl.accessToken = apiSecret
       this.map = new mapboxgl.Map({
         container: 'map',
-        // style:'mapbox://styles/ashish64/cks04p2e41rsp18t34ohudpsb',
-        style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu',
+        style:'mapbox://styles/ashish64/cks04p2e41rsp18t34ohudpsb',
+        // style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu',
         zoom:13.5,
         center:[13.374228, 55.945831],
         displayControlsDefault: false,
@@ -113,48 +113,7 @@ export default {
 
     },
 
-    addLandMarks(){
-      this.map.on('load', () =>{
-        this.map.loadImage(
-          'https://api.stockamollan.guide/wp-content/uploads/2021/08/streamline-icon-landmarks-stone@48x48.svg',
-          (error, image) => {
-            if (error) throw error;
-
-// Add the image to the map style.
-            this.map.addImage('landmark-icon', image);
-
-// Add a data source containing one point feature.
-            this.map.addSource('landmark', {
-              'type': 'geojson',
-              'data': {
-                'type': 'FeatureCollection',
-                'features': [
-                  {
-                    'type': 'Feature',
-                    'geometry': {
-                      'type': 'symbol',
-                      'coordinates': [13.375814,
-                        55.949088]
-                    }
-                  }
-                ]
-              }
-            });
-
-// Add a layer to use the image to represent the data.
-            this.map.addLayer({
-              'id': 'landmark',
-              'type': 'symbol',
-              'source': 'landmark', // reference the data source
-              'layout': {
-                'icon-image': 'landmark-icon', // reference the image
-
-              }
-            });
-          }
-        );
-      })
-    },
+    
     addMapboxMarker(){
 
 
