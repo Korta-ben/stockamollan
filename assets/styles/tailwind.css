@@ -42,13 +42,13 @@ div.navicon{
 .maplink{
   @apply bg-stGreen absolute right-0 float-right rounded-bl-full bg-no-repeat bg-center;
   background-image: url("https://api.stockamollan.guide/wp-content/uploads/2021/07/streamline-icon-maps-pin-1@140x140-kopia-1.svg") ;
-  margin-top:91px;
+  margin-top:32px;
   width: 106px;
   height: 96px;
 }
 /*header card*/
 .header-home{
-  padding-top:91px;
+  /*padding-top:91px;*/
   padding-bottom: 86px;
 }
 .page-top-padding{
@@ -166,3 +166,19 @@ div.navicon{
 .trails-wedgit input:checked + label{
   opacity: 7
 }
+/*.slick-slider {*/
+/*  @apply flex-wrap justify-around;*/
+/*  display:flex !important;*/
+
+/*}*/
+/*.slick-slider div.slick-list{*/
+/*  @apply order-1*/
+/*}*/
+
+/*.slick-slider .slick-prev{*/
+/*  @apply order-2*/
+/*}*/
+
+/*.slick-slider .slick-next{*/
+/*  @apply order-3*/
+/*}*/

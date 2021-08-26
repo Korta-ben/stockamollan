@@ -7,7 +7,7 @@
           class="landmark-custom pl-7 landmark-header-overlay bg-no-repeat bg-right bg-cover leading-9 lg:page-header-height  lg:w-1/2"></div>
       </div>
     <div class="px-7  xl:px-36 lg:px-28  -mt-36 lg:-mt-72 ">
-      <h1 v-html="headerTitle" class="lora font-medium text-3xl text-stCream pb-9"></h1>
+      <h1 v-html="headerTitle" class="lora font-medium text-xl text-stCream pb-9"></h1>
       <div class="flex flex-col lg:flex-row">
         <div
           class="bg-stLightGreen px-11 pt-11  rounded-t-xl  flex flex-col content-center lg:pt-5 lg:rounded-t-none lg:w-3/4 lg:rounded-l-2xl md:flex-wrap md:flex-row lg:h-64">
@@ -16,7 +16,7 @@
             <LandmarkRouteDetail  :routeDetails="routeStuff"  class="pt-3.5"/>
           </div>
           <div class="md:w-1/2 md:px-10 lg:pr-20">
-            <h4 class="font-medium text-2xl leading-6 pb-3.5">Kännetecken</h4>
+            <h4 class="font-medium text-xl leading-6 pb-3.5">Kännetecken</h4>
             <p v-html="landmarkHighlights" class="text-sm leading-5 pb-9"></p>
           </div>
         </div>

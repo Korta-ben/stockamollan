@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-stGreen px-12 py-20 ">
-    <div class="flex flex-col lg:flex-row gap-4 lg-flex-wrap justify-between items-center lg:items-start  siteMaxWidth">
+    <div class="flex flex-col lg:flex-row gap-4 lg-flex-wrap justify-center items-center lg:items-start  siteMaxWidth">
       <div class="lg:w-1/3 max-w-xs lg:order-2" >
         <img :src="logo.logo" class="m-auto">
       </div>

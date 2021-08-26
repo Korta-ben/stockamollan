@@ -16,18 +16,19 @@
         <div class="flex flex-row px-5" v-for="landmark in landmarks"
              :key="landmark.id">
           <div class=" flex  slider-width "  >
-            <div class=" bg-center bg- bg-top w-1/2 rounded-l-xl object-cover bg-no-repeat"  v-bind:style="{
+            <div class=" bg-center bg- bg-top w-1/3 rounded-l-xl object-cover bg-no-repeat"  v-bind:style="{
               'background-image':
             'url(' +
     landmark.acf.header_image + ')'
     }" >
 <!--              <img :src="landmark.acf.header_image" class="object-cover  ">-->
             </div>
-            <div class="py-7 px-6 w-1/2  bg-stLightGreen	rounded-r-xl">
-              <h2 v-html="landmark.title.rendered" class="pb-7 break-words"></h2>
-              <p v-html="landmark.acf.kannetecken" class="pb-7"></p>
+            <div class="py-7 px-6 w-2/3  bg-stLightGreen	rounded-r-xl">
+              <h2 v-html="landmark.title.rendered" class="pb-7 text-xl font-medium break-words"></h2>
+              <p v-html="landmark.acf.kannetecken" class="pb-7 text-base"></p>
 
-              <NuxtLink :to="{ name: 'sevardheter-slug', params: { slug: landmark.slug } }" class="flex justify-items-start justify-items-start">
+              <NuxtLink :to="{ name: 'sevardheter-slug', params: { slug: landmark.slug } }"
+                        class="flex justify-items-start justify-items-start text-sm font-medium">
                 <span  class="bg-stGreen tipIcon inline-block  w-5 h-5 mr-1.5 "> </span>
                 LÄS MER
               </NuxtLink>

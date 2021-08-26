@@ -4,13 +4,13 @@
       <img class="rounded-t-xl object-cover h-auto lg:rounded-tr-none lg:rounded-bl-xl"
            :src="landmark.acf.header_image">
     </div >
-    <div class=" pt-10 px-7 lg:px-24 lg:w-1/3 lg:py-5 lg:flex lg:flex-col " >
-      <h3 class="font-medium text" v-html="landmark.title.rendered"></h3>
+    <div class=" pt-14 px-7 lg:px-24 lg:pr-20 lg:w-1/3 lg:py-12 lg:flex lg:flex-col " >
+      <h3 class="font-medium text-3xl" v-html="landmark.title.rendered"></h3>
       <TheLandmarkRouteInfo  :vandringslederna="landmark.acf.vandringslederna[0].acf"/>
     </div>
-    <div class="px-7 lg:pr-24 lg:w-1/3 lg:flex lg:flex-col lg:justify-between lg:py-5">
+    <div class="px-7 lg:pr-24 lg:w-1/3 lg:flex lg:flex-col lg:justify-between lg:py-12">
       <h3 class="hidden lg:block text-xl font-medium">Kännetecken</h3>
-      <p  class="hidden  lg:block text-sm" v-html="landmark.acf.kannetecken">
+      <p  class="hidden   lg:block text-sm" v-html="landmark.acf.kannetecken">
 
       </p>
       <div class="text-sm text-stGreen flex justify-between py-10 lg:py-0">
