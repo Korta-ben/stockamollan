@@ -1,5 +1,5 @@
 <template>
-  <main class="siteMaxWidth">
+  <main class="siteMaxWidth p-below-menu">
 <!--  header index -->
     <section class="header-home">
       <HeaderCard :cardInfo="headerCard"/>
@@ -43,7 +43,7 @@
       </NuxtLink >
     </section>
   <!-- Route Block appears here -->
-    <section class="container-width">
+    <section>
       <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
         Vandringslederna
       </h2>
@@ -64,9 +64,7 @@
 <script>
 
 import axios from "axios";
-import TheLandmarkSlider from "../components/blocks/TheLandmarkSlider";
 
-import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 export default {
   data() {
@@ -156,7 +154,7 @@ export default {
 
   async asyncData() {
     const { data } = await axios.get(
-      `https://fricks.kortaben.work/wp-json/wp/v2/pages/53`
+      `https://api.stockamollan.guide/wp-json/wp/v2/pages/53`
     )
 
     let card = data.acf.card

@@ -181,6 +181,14 @@ div.navicon{
   border-radius: 10px;
 }
 
+.p-below-menu{
+  padding-top:92px
+}
+.make-it-blur{
+  background-color: #697A4495;
+  background-image: none;
+  backdrop-filter: blur(8px);
+}
 
 /*.slick-slider {*/
 /*  @apply flex-wrap justify-around;*/

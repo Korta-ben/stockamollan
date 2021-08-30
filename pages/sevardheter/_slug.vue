@@ -12,7 +12,7 @@ export default {
 
   async asyncData ({ params }) {
     const { data } = await axios.get(
-      `https://fricks.kortaben.work/wp-json/wp/v2/sevardheter?slug=${params.slug}`
+      `https://api.stockamollan.guide/wp-json/wp/v2/sevardheter?slug=${params.slug}`
     )
     return { data }
   },

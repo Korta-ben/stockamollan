@@ -91,3 +91,5 @@ sw.*
 
 #server middleware
 server-middleware/
+
+nginx.conf

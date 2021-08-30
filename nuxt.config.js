@@ -71,7 +71,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'https://fricks.kortaben.work/wp-json/wp/v2/',
+    baseURL: 'https://api.stockamollan.guide/wp-json/wp/v2/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

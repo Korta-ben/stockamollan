@@ -38,7 +38,7 @@ export default {
     }
   },
   async fetch () {
-    const { data } = await axios.get(`https://fricks.kortaben.work/wp-json/wp/v2/layout_settings/22`)
+    const { data } = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/layout_settings/22`)
     this.logo = data.acf.new_footer.filter(o => o.acf_fc_layout === "logo")[0];
     this.info = data.acf.new_footer.filter(o => o.acf_fc_layout === "footer_card")[0];
     this.social = data.acf.new_footer.filter(o => o.acf_fc_layout === "social_media")[0];
