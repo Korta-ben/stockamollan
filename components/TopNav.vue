@@ -1,6 +1,6 @@
 <template>
   <div class=" w-full h-auto bg-stLightGreen  py-8 ">
-    <div class="flex justify-between  px-7 siteMaxWidth z-20">
+    <div class="flex justify-between  px-7 container-width z-20">
       <div class="font-bold text-stBrown uppercase text-xl leading-6">
         <NuxtLink to="/">Stockamöllan</NuxtLink>
       </div>
@@ -14,7 +14,7 @@
           <div class="navicon navico3 ml-auto" />
         </div>
         <ul :class="{hidden : showMenu}" class="animate-fade-in-down lg:block">
-          <li v-for="(item, i) in menuItems" :key="i" class="text-right  font-medium text-lg text-stGreen py-2 lg:inline lg:px-2">
+          <li v-for="(item, i) in menuItems" :key="i" class="text-right  font-semibold text-lg text-stGreen py-2 lg:inline lg:px-2">
             <NuxtLink
               :to="{name:item.slug}">
               {{ item.title }}
@@ -39,7 +39,7 @@ export default {
     }
   },
   async fetch () {
-    this.menuItems = await fetch('https://api.stockamollan.guide/wp-json/wp/v2/menu')
+    this.menuItems = await fetch('https://fricks.kortaben.work/wp-json/wp/v2/menu')
       .then(res =>
         res.json()
       )

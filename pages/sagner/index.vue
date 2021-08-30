@@ -19,7 +19,7 @@ export default {
 
   async asyncData ({ params }) {
     const { data } = await axios.get(
-      `https://api.stockamollan.guide/wp-json/wp/v2/sagner`
+      `https://fricks.kortaben.work/wp-json/wp/v2/sagner`
     )
     let stories = data
     return { stories }

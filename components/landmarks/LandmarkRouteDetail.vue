@@ -6,7 +6,7 @@
     <div class="flex mb-5 border-t border-stGreen pt-6 mt-6">
       <span class="text-sm font-medium leading-4 text-stGreen">
           <img src="~/assets/images/location-green.svg"  class="inline-block">
-        CA {{ routeDetails.distance }} KM
+       <span class="pt-0.5">CA {{ routeDetails.distance }} KM</span>
       </span>
       <ul class="flex">
         <li  v-for="icon in routeDetails.accessibility">

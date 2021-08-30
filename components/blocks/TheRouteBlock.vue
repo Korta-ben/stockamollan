@@ -1,5 +1,5 @@
 <template>
-  <div  class="pt-7 mb-14  rounded-xl shadow-lg hover:shadow-2xl transition">
+  <div  class="pt-7 mb-14  rounded-xl trail-shadow hover:shadow-2xl transition">
     <h3 class="font-semibold text-xl leading-6 px-7 text-stBrown mb-5">
       <div class="w-4 h-4 mr-4 rounded-full inline-block" :class="trailInfo.acf.colour.value"> </div>
       {{ trailInfo.title.rendered}}
@@ -15,7 +15,7 @@
         </li>
       </ul>
     </div>
-    <div class="text-lg font-normal leading-5 mb-9 px-7" v-html="trailInfo.content.rendered">
+    <div class="text-sm font-normal leading-6 mb-9 px-7" v-html="trailInfo.content.rendered">
 
     </div>
     <div class="bg-stGreen text-stCream uppercase font-semibold text-sm leading-4 w-full py-4 text-center">

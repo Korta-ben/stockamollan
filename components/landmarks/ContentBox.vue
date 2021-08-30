@@ -9,7 +9,6 @@
         <vue-masonry-wall :items="items" :options="options"  >
           <template v-slot:default="{item}" class="">
             <div class="item">
-
               <img :src="item.Select"  class="w-full " >
             </div>
           </template>

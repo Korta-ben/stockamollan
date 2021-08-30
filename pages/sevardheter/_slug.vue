@@ -1,6 +1,6 @@
 <template>
   <main class="siteMaxWidth">
-    <LandmarkHeader class="page-top-padding pb-16" :pageData="data[0]" />
+    <LandmarkHeader class="pb-16" :pageData="data[0]" />
     <ContentBox v-for="blocks in contentBoxStuff" :key="blocks.id" :contentBoxData="blocks" class="xl:px-36 lg:px-28 "/>
   </main>
 </template>
@@ -12,7 +12,7 @@ export default {
 
   async asyncData ({ params }) {
     const { data } = await axios.get(
-      `https://api.stockamollan.guide/wp-json/wp/v2/sevardheter?slug=${params.slug}`
+      `https://fricks.kortaben.work/wp-json/wp/v2/sevardheter?slug=${params.slug}`
     )
     return { data }
   },

@@ -24,12 +24,12 @@
 <!--              <img :src="landmark.acf.header_image" class="object-cover  ">-->
             </div>
             <div class="py-7 px-6 w-2/3  bg-stLightGreen	rounded-r-xl">
-              <h2 v-html="landmark.title.rendered" class="pb-7 text-xl font-medium break-words"></h2>
-              <p v-html="landmark.acf.kannetecken" class="pb-7 text-base"></p>
+              <h2 v-html="landmark.title.rendered" class="pb-7 text-lg font-semibold break-words"></h2>
+              <p v-html="landmark.acf.kannetecken" class="pb-7 text-sm"></p>
 
               <NuxtLink :to="{ name: 'sevardheter-slug', params: { slug: landmark.slug } }"
-                        class="flex justify-items-start justify-items-start text-sm font-medium">
-                <span  class="bg-stGreen tipIcon inline-block  w-5 h-5 mr-1.5 "> </span>
+                        class="flex justify-items-start justify-items-start text-sm font-semibold text-stGreen">
+                <span  class="bg-stGreen tipIcon  inline-block  w-5 h-5 mr-1.5 "> </span>
                 LÄS MER
               </NuxtLink>
             </div>
@@ -38,10 +38,12 @@
         </div>
       </VueSlickCarousel>
 
-
+      <NuxtLink to="/sevardheter" class="block p-10 text-center font-semibold text-lg text-stGreen">
+        Visa alla
+      </NuxtLink >
     </section>
   <!-- Route Block appears here -->
-    <section>
+    <section class="container-width">
       <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
         Vandringslederna
       </h2>
@@ -76,7 +78,7 @@ export default {
           "dots": false,
           "infinite": true,
           "speed": 500,
-          "slidesToShow": 3,
+          "slidesToShow": 4,
           "slidesToScroll": 1,
           "initialSlide": 0,
           "arrows":false,
@@ -154,7 +156,7 @@ export default {
 
   async asyncData() {
     const { data } = await axios.get(
-      `https://api.stockamollan.guide/wp-json/wp/v2/pages/53`
+      `https://fricks.kortaben.work/wp-json/wp/v2/pages/53`
     )
 
     let card = data.acf.card

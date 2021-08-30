@@ -18,6 +18,7 @@ div.navicon{
  max-width: 1440px
 }
 
+
 .bg-trlYellow {
   background-color:#FBE159;
 }
@@ -161,11 +162,26 @@ div.navicon{
   }
 
 
+
+}
+
+
+.container-width{
+  margin:0 auto;
+  width: 1384px;
+  padding: 0 50px;
 }
 
 .trails-wedgit input:checked + label{
   opacity: 7
 }
+
+.trail-shadow{
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+
 /*.slick-slider {*/
 /*  @apply flex-wrap justify-around;*/
 /*  display:flex !important;*/
