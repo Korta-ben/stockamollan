@@ -1,6 +1,7 @@
 <template>
 
   <main >
+
     <div class="py-3 absolute object-left trails-wedgit z-10">
       <ul>
 
@@ -89,6 +90,12 @@ export default {
     },
 
     addMapboxLayer(layer){
+      console.log(this.$route)
+
+      let trace = (this.$route.query.name == undefined || this.$route.query.name  === layer.slug) ? "visible" : "none"
+
+      // console.log(trace)
+
       this.map.on('load', () => {
         this.map.addSource(layer.slug, {
           'type': 'geojson',
@@ -101,7 +108,7 @@ export default {
           'layout': {
             'line-join': 'round',
             'line-cap': 'round',
-            'visibility': "visible"
+            'visibility': trace
           },
           'paint': {
             'line-color':layer.acf.hexcolour,

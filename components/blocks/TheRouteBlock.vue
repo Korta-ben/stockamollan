@@ -19,8 +19,11 @@
 
     </div>
     <div class="bg-stGreen text-stCream uppercase font-semibold text-sm leading-4 w-full py-4 text-center">
-      <NuxtLink :to="{name: 'vandringsleder-landmark', params:{landmark:trailInfo.slug}}" >
+      <NuxtLink v-show="isHome" :to="{name: 'vandringsleder-landmark', params:{landmark:trailInfo.slug}}" >
         Sevärdheter på slingan
+      </NuxtLink>
+      <NuxtLink v-show="!isHome" :to="{name: 'vandringsleder-map', query:{name:trailInfo.slug}}" >
+        Se på kartan
       </NuxtLink>
     </div>
   </div>
@@ -33,8 +36,11 @@ export default {
   props: {
     trailInfo: {
       type: [Object, Array]
-    }
+    },
+    isHome:{Boolean}
   },
+
+
 
 }
 </script>
