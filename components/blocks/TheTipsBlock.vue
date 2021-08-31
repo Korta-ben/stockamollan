@@ -4,11 +4,11 @@
       <img src="~/assets/images/tips.svg"  class="inline-block"/>
       {{ tipCard.title }}
     </h3>
-    <div v-html="tipCard.body" class="text-center lg:text-left px-7 lg:pr-20 pt-5 text-stCream text-lg pb-32">
+    <div v-html="tipCard.body" class="text-center lg:text-left px-7 lg:pr-20 pt-5 text-stCream text-base pb-32">
 
     </div>
     <div v-html="tipCard.button_text"
-         class="text-center py-3.5  leading-6 mx-7  text-stCream text-xl font-medium border-2 border-stCream">
+         class="text-center py-3 leading-6 mx-8 text-stCream text-lg font-medium border-2 border-stCream">
 
     </div>
   </div>

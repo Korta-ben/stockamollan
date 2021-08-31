@@ -5,7 +5,7 @@
            :src="landmark.acf.header_image">
     </div >
     <div class=" pt-14 px-7 lg:px-24 lg:pr-20 lg:w-1/3 lg:py-12 lg:flex lg:flex-col " >
-      <h3 class="font-medium text-3xl" v-html="landmark.title.rendered"></h3>
+      <h3 class="font-medium text-2xl" v-html="landmark.title.rendered"></h3>
       <TheLandmarkRouteInfo  :vandringslederna="landmark.acf.vandringslederna[0].acf"/>
     </div>
     <div class="px-7 lg:pr-24 lg:w-1/3 lg:flex lg:flex-col lg:justify-between lg:py-12">
@@ -13,14 +13,14 @@
       <p  class="hidden   lg:block text-sm" v-html="landmark.acf.kannetecken">
 
       </p>
-      <div class="text-sm text-stGreen flex justify-between py-10 lg:py-0">
-        <div class="flex ">
+      <div class="text-sm text-stGreen  py-10 lg:py-0 text-right">
+
           <NuxtLink :to="{ name: 'sevardheter-slug', params: { slug: landmark.slug } }">
             <span  class="bg-stGreen tipIcon inline-block  w-5 h-5 mr-1.5 "> </span>
             <span >LÄS MER</span>
           </NuxtLink>
-        </div>
-        <div>SÄGEN</div>
+
+
       </div>
     </div>
 

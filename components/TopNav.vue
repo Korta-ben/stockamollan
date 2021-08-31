@@ -1,7 +1,7 @@
 <template>
   <div class=" w-full h-auto bg-stLightGreen  py-8 fixed z-30 make-it-blur">
     <div class="flex justify-between  px-7 container-width z-20">
-      <div class="font-bold text-stBrown uppercase text-xl leading-6">
+      <div class="font-bold text-stCream uppercase text-xl leading-6">
         <NuxtLink to="/">Stockamöllan</NuxtLink>
       </div>
       <nav class="flex flex-col ">

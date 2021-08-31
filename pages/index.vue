@@ -24,7 +24,7 @@
 <!--              <img :src="landmark.acf.header_image" class="object-cover  ">-->
             </div>
             <div class="py-7 px-6 w-2/3  bg-stLightGreen	rounded-r-xl">
-              <h2 v-html="landmark.title.rendered" class="pb-7 text-lg font-semibold break-words"></h2>
+              <h2 v-html="landmark.title.rendered" class="pb-5 text-lg font-semibold break-words"></h2>
               <p v-html="landmark.acf.kannetecken" class="pb-7 text-sm"></p>
 
               <NuxtLink :to="{ name: 'sevardheter-slug', params: { slug: landmark.slug } }"
