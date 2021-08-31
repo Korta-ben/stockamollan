@@ -1,5 +1,5 @@
 <template>
-  <main class="siteMaxWidth p-below-menu">
+  <main class="siteMaxWidth pt-24">
 <!--  header index -->
     <section class="header-home">
       <HeaderCard :cardInfo="headerCard"/>
@@ -43,7 +43,7 @@
       </NuxtLink >
     </section>
   <!-- Route Block appears here -->
-    <section>
+    <section class="lg:container-width ">
       <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
         Vandringslederna
       </h2>

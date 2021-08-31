@@ -11,7 +11,7 @@ body{
 div.navicon{
   @apply block w-8  relative mb-1 bg-stGreen rounded-3xl;
   transition: background .2s ease-out;
-  height: 5px;
+  height: 3px;
 }
 .siteMaxWidth{
   @apply  m-auto;
@@ -88,6 +88,14 @@ div.navicon{
   /*background-image: url('~/assets/images/stroller.svg');*/
 }
 
+.map {
+  mask-image: url('~/assets/images/map_access.svg');
+  -webkit-mask-image: url('~/assets/images/map_access.svg');
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  /*background-image: url('~/assets/images/stroller.svg');*/
+}
+
 /*landmarks header custom styles*/
 .landmark-custom{
   height: 264px;
@@ -151,6 +159,12 @@ div.navicon{
   .mapboxgl-canvas{
     @apply rounded-bl-none rounded-r-2xl;
   }
+  .container-width{
+    margin:0 auto;
+    max-width: 1024px;
+    padding: 0 50px;
+  }
+
 }
 
 @responsive {
@@ -160,17 +174,15 @@ div.navicon{
   .trails-wedgit{
     top: 45%;
   }
-
-
-
+  .container-width{
+    margin:0 auto;
+    max-width: 1384px;
+    padding: 0 50px;
+  }
 }
 
 
-.container-width{
-  margin:0 auto;
-  width: 1384px;
-  padding: 0 50px;
-}
+
 
 .trails-wedgit input:checked + label{
   opacity: 7
