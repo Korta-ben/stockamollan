@@ -6,12 +6,12 @@
       </div>
 
       <div class="text-center  text-stCream mt-20 lg:mt-0 lg:w-2/5 lg:text-left max-w-xs lg:order-1">
-        <h2 v-html="info.title" class="text-3xl leading-9 font-medium pb-3"></h2>
+        <h2 v-html="info.title" class="text-2xl leading-9 font-medium pb-3"></h2>
         <div v-html="info.info_text"></div>
       </div>
 
       <div class="text-center text-stCream mt-20 lg:mt-0 lg:w-2/5 lg:text-left max-w-xs lg:order-3">
-        <h2 v-html="social.title" class="text-3xl leading-9 font-medium pb-3"></h2>
+        <h2 v-html="social.title" class="text-2xl leading-9 font-medium pb-3"></h2>
         <div v-html="social.paragraph"></div>
         <ul>
           <li class="inline-flex py-16 mx-2.5"  v-for="sm in social.facebook" >

@@ -1,5 +1,5 @@
 <template>
-  <main class="siteMaxWidth">
+  <main class="siteMaxWidth pt-24">
     <LandmarkHeader class="pb-16" :pageData="data[0]" />
     <ContentBox v-for="blocks in contentBoxStuff" :key="blocks.id" :contentBoxData="blocks" class="xl:px-36 lg:px-28 "/>
   </main>

@@ -16,13 +16,11 @@
 import axios from "axios";
 
 export default {
+  data(){
+    return {
+        stories:this.$store.getters.getStories,
+    }
+  },
 
-  async asyncData ({ params }) {
-    const { data } = await axios.get(
-      `https://api.stockamollan.guide/wp-json/wp/v2/sagner`
-    )
-    let stories = data
-    return { stories }
-  }
 }
 </script>

@@ -6,7 +6,7 @@
     </section>
 
 <!--    landmark slider-->
-    <section class="px-7 pb-24">
+    <section class="pb-24">
       <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
         Sevärdheter
       </h2>
@@ -53,7 +53,7 @@
 <!--    section for tips  -->
     <section v-bind:style="{ 'background-image': 'url(' +
     tipCard.image + ')'
-    }" class="bg-no-repeat bg-center bg-cover mt-10 mb-2">
+    }" class="bg-no-repeat  bg-cover mt-10 mb-2">
       <TheTipsBlock :tipCard="tipCard" />
     </section>
 <!--    section for hitta hit-->
