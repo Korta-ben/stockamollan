@@ -166,6 +166,10 @@ div.navicon{
     padding: 0 50px;
   }
 
+  .contain-offset{
+    padding-top: 96px !important;
+  }
+
 }
 
 @responsive {
@@ -180,8 +184,12 @@ div.navicon{
     max-width: 1440px;
     padding: 0 50px;
   }
+
 }
 
+.contain-offset{
+  padding-top: 88px;
+}
 
 
 

@@ -1,5 +1,5 @@
 <template>
-  <main class="siteMaxWidth pt-24">
+  <main class="siteMaxWidth contain-offset">
 <!--  header index -->
     <section class="header-home">
       <HeaderCard :cardInfo="headerCard"/>

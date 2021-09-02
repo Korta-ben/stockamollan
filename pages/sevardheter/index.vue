@@ -8,12 +8,21 @@
       <h3 class="text-stGreen text-base font-bold leading-6 pt-11">FILTRERA:</h3>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <button v-for="trail in trails" :key="trail.index"
-                class="border-2 border-stGreen text-stGreen font-semibold text-lg leading-7 py-4"
+                class="border-2 border-stGreen text-stGreen font-semibold text-lg leading-7 py-4 focus:bg-stGreen focus:text-stCream"
                 @click="filterLandmakrs(trail.id)"
         >
 
           {{ trail.acf.colour.label }} slinga
         </button>
+
+        <button
+          class="md:col-span-3 sm:col-span-2 border-2 border-stGreen text-stGreen font-semibold text-lg leading-7 py-4"
+                @click="allLandmarks"
+        >
+
+          Visa allt
+        </button>
+
       </div>
 
     </div>
@@ -47,14 +56,11 @@ export default {
       this.landmarks = this.$store.getters.getLandmarks.filter( l =>
          l.acf.vandringslederna.filter( v => v.ID == trailId).pop()
     )
+    },
+    allLandmarks(){
+      this.landmarks = this.$store.getters.getLandmarks
+    }
 
-
-
-
-
-
-
-        }
   }
 
 
