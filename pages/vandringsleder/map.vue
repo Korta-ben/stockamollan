@@ -24,7 +24,7 @@
 
       </ul>
     </div>
-    <div id="map"  class=" h-screen w-full ">
+    <div id="map"  class=" h-screen w-full  contain-offset">
     </div>
   </main>
 </template>
