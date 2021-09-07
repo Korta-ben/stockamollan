@@ -58,8 +58,10 @@ export default {
 
   mounted() {
     this.renderMap(this.$config.apiSecret);
+
     this.trails.forEach(o => this.addMapboxLayer(o));
-    // this.addLandMarks();
+
+
   },
 
   methods:{
@@ -67,12 +69,13 @@ export default {
       mapboxgl.accessToken = apiSecret
       this.map = new mapboxgl.Map({
         container: 'map',
-        style:'mapbox://styles/ashish64/cks04p2e41rsp18t34ohudpsb',
+        style:'mapbox://styles/ashish64/ckt2pjn1o27yd18nz0okz8p2b',
         // style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu',
         zoom:13.5,
         center:[13.374228, 55.945831],
         displayControlsDefault: false,
       })
+
 
       const locateMe = new mapboxgl.GeolocateControl({
         positionOptions: {
@@ -121,10 +124,6 @@ export default {
     },
 
 
-    addMapboxMarker(){
-
-
-    },
 
 
     updateLayerVisibility(layerId){

@@ -8,7 +8,7 @@
       <h3 class="font-medium text-2xl" v-html="landmark.title.rendered"></h3>
       <TheLandmarkRouteInfo  :vandringslederna="landmark.acf.vandringslederna[0].acf"/>
     </div>
-    <div class="px-7 lg:pr-24 lg:w-1/3 lg:flex lg:flex-col lg:justify-evenly lg:py-12">
+    <div class="px-7 lg:pr-24 lg:w-1/3 lg:flex lg:flex-col lg:justify-between lg:py-12">
       <h3 class="hidden lg:block text-xl font-medium">Kännetecken</h3>
       <p  class="hidden   lg:block text-sm" v-html="landmark.acf.kannetecken">
 

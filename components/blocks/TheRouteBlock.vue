@@ -5,11 +5,12 @@
       {{ trailInfo.title.rendered}}
     </h3>
     <div class="flex mb-5 px-7">
-      <span class="text-sm font-medium leading-4 mr-4">
+      <span class="text-sm font-medium leading-4 pr-7 ">
           <img src="~/assets/images/distance.svg"  class="inline-block">
         CA {{ trailInfo.acf.distance }} KM
       </span>
-      <ul class="flex px-7">
+      <div>|</div>
+      <ul class="flex px-7 ">
         <li  v-for="icon in trailInfo.acf.accessibility">
           <span class="accessibility-icon bg-stBrown" :class="icon"></span>
         </li>
