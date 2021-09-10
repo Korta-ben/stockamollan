@@ -24,7 +24,7 @@
 
       </ul>
     </div>
-    <div id="map"  class=" h-screen w-full  contain-offset">
+    <div id="map"  class=" h-screen w-full">
     </div>
   </main>
 </template>
@@ -70,7 +70,6 @@ export default {
       this.map = new mapboxgl.Map({
         container: 'map',
         style:'mapbox://styles/ashish64/ckt2pjn1o27yd18nz0okz8p2b',
-        // style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu',
         zoom:13.5,
         center:[13.374228, 55.945831],
         displayControlsDefault: false,
