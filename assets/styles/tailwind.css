@@ -96,7 +96,6 @@ div.navicon{
   /*background-image: url('~/assets/images/stroller.svg');*/
 }
 
-
 /*landmarks header custom styles*/
 .landmark-custom{
   height: 264px;
@@ -193,8 +192,8 @@ div.navicon{
 
 
 
-.trails-wedgit input:checked + label{
-  opacity: 7
+.trails-wedgit input[type="checkbox"]:checked + label{
+  opacity: 0.5 !important;
 }
 
 .trail-shadow{

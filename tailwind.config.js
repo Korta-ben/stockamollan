@@ -16,6 +16,7 @@ module.exports = {
       trlSKy: '#00A7CC'
     },
     extend: {
+      opacity: ['disabled'],
       screens: {
         'dxl': '1440px',
       },

@@ -7,18 +7,18 @@
 
         <li v-for="trail in trails" :key="trail.id"
 
-        >
+        > <input
+          type="checkbox"
+          :id="trail.id"
+          hidden
+          @click="updateLayerVisibility(trail);">
           <label
-            class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5"
+            class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5 mappage-route-visibility"
             :for="trail.id">
-            <input
-              type="checkbox"
-              :id="trail.id"
-              @click="updateLayerVisibility(trail);">
             <span
-              class="w-4 h-4 mr-4  rounded-full inline-block border-trlYellow"
+              class="circle-route-icon w-4 h-4 mr-4  rounded-full inline-block border-trlYellow"
               :class="trail.acf.colour.value"> </span>
-            <span class="hidden md:inline-block">{{ trail.acf.colour.label }} slinga</span>
+            <span class="route-name hidden md:inline-block">{{ trail.acf.colour.label }} slinga</span>
           </label>
         </li>
 
