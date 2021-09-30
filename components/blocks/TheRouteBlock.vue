@@ -1,5 +1,5 @@
 <template>
-  <div  class="pt-7 mb-14  rounded-xl trail-shadow hover:shadow-2xl transition">
+  <div  class="pt-7 mb-14  rounded-xl trail-shadow hover:shadow-2xl transition flex flex-col justify-between">
     <h3 class="font-semibold text-xl leading-6 px-7 text-stBrown mb-5">
       <div class="w-4 h-4 mr-4 rounded-full inline-block" :class="trailInfo.acf.colour.value"> </div>
       {{ trailInfo.title.rendered}}

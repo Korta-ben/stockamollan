@@ -138,7 +138,7 @@ div.navicon{
 }
 
 .slick-slider > button.slick-prev{
-  @apply order-2;
+  @apply order-2 pb-10;
   padding-top: 56px;
   font-size: 0;
 
@@ -147,7 +147,7 @@ div.navicon{
   @apply order-1;
 }
 .slick-slider > button.slick-next{
-  @apply order-3;
+  @apply order-3  pb-10;
   padding-top: 56px;
   font-size: 0;
 }

@@ -6,7 +6,7 @@
     </section>
 
 <!--    landmark slider-->
-    <section class="pb-24">
+    <section class="pb-24 flex flex-col">
       <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
         Sevärdheter
       </h2>
@@ -38,7 +38,7 @@
         </div>
       </VueSlickCarousel>
 
-      <NuxtLink to="/sevardheter" class="block p-10 text-center font-semibold text-lg text-stGreen">
+      <NuxtLink to="/sevardheter" class="text-center font-semibold text-lg text-stGreen">
         Visa alla
       </NuxtLink >
     </section>
