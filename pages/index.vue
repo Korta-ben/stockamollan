@@ -38,7 +38,7 @@
         </div>
       </VueSlickCarousel>
 
-      <NuxtLink to="/sevardheter" class="text-center font-semibold text-lg text-stGreen">
+      <NuxtLink to="/sevardheter" class="text-center font-semibold text-lg text-stGreen mt-10">
         Visa alla
       </NuxtLink >
     </section>
