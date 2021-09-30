@@ -78,6 +78,8 @@ export default {
     ],
   },
 
+
+
   data() {
     return {
       landmarks: this.$store.getters.getLandmarks,

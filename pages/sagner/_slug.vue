@@ -23,7 +23,8 @@ export default {
         title: this.data[0].title.rendered,
         intro: this.data[0].acf.kannetecken,
         vandringslederna: this.data[0].acf.vandringslederna,
-        header_image: this.data[0].acf.header_image
+        header_image: this.data[0].acf.header_image,
+        introduction: this.data[0].acf.introduktion
       }
     },
     contentBoxStuff(){
