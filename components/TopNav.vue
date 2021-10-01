@@ -50,7 +50,7 @@
 
 
     </div>
-    <div class="siteMaxWidth pl-7 overflow-hidden hidden lg:block">
+    <div class="siteMaxWidth pl-12 overflow-hidden hidden lg:block">
       <div class="half-circle   make-it-blur ">
       </div>
       <NuxtLink to="/" class="fixed">
