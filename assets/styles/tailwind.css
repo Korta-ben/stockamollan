@@ -18,6 +18,20 @@ div.navicon{
  max-width: 1440px
 }
 
+.site-logo{
+  width: 67px;
+  margin-top: -121px;
+  margin-left: 20px;
+}
+.logo-bg-container{
+  padding-left: 29px;
+}
+.half-circle {
+  width: 111px;
+  height: 111px;
+  border-radius: 0 0 100% 100%;
+  margin-top:-45px;
+}
 
 .bg-trlYellow {
   background-color:#FBE159;
