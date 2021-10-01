@@ -2,7 +2,7 @@
   <footer class="bg-stGreen px-12 py-20 ">
     <div class="flex flex-col lg:flex-row gap-4 lg-flex-wrap justify-center items-center lg:items-start  siteMaxWidth">
       <div class="lg:w-1/5 max-w-xs lg:order-2" >
-        <img :src="logo.logo" class="m-auto">
+        <img :src="logo.logo" class="m-auto h-36">
       </div>
 
       <div class="text-center  text-stCream mt-20 lg:mt-0 lg:w-2/5 lg:text-left max-w-xs lg:order-1">
