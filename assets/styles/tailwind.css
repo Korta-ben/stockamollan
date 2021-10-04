@@ -237,10 +237,12 @@ button.slick-prev:before{
 
 
 
+.trails-wedgit input[type="checkbox"] + label{
+  opacity: 1 !important;
+}
 .trails-wedgit input[type="checkbox"]:checked + label{
   opacity: 0.5 !important;
 }
-
 .trail-shadow{
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
@@ -250,9 +252,7 @@ button.slick-prev:before{
   padding-top:92px
 }
 .make-it-blur{
-  background-color: #697A4495;
-  background-image: none;
-  backdrop-filter: blur(8px);
+  background-color: #697A44;
 }
 
 /*.slick-slider {*/

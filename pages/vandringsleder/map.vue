@@ -31,8 +31,6 @@
 
 <script>
 import mapboxgl from 'mapbox-gl'
-
-
 import axios from "axios";
 export default {
 

@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-48 siteMaxWidth xl:px-36 lg:px-28 ">
+  <main class="py-48 siteMaxWidth xl:px-36 lg:px-28 ">
     <section>
       <h2 class="text-3xl text-center text-stBrown lora font-medium leading-10 mb-11">
         Vandringslederna

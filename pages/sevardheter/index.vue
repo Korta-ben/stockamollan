@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-48 siteMaxWidth xl:px-36 lg:px-28 ">
+  <main class="py-48 siteMaxWidth xl:px-36 lg:px-28 mb-48">
     <h1 class=" lora font-medium text-3xl text-center px-12 pb-4">Sevärheterna i Stockamöllan</h1>
     <div class="max-w-2xl mx-auto text-center px-5">
       <p>
@@ -30,7 +30,7 @@
 
 
 
-    <section class="p-7 lg:py-7 mb-48">
+    <section class="p-7 lg:py-7 ">
       <h1 v-if="!landmarks.length" class="text-center">Sorry, No landmarks here!</h1>
       <TheLandmarkCard v-for="landmark in landmarks" :key="landmark.id" :landmark="landmark"
                        class="mb-7 rounded-xl hover:shadow-2xl transition "/>

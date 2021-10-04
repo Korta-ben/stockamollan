@@ -1,5 +1,5 @@
 <template>
-  <main class="siteMaxWidth xl:px-36 lg:px-28 ">
+  <main class="siteMaxWidth xl:px-36 lg:px-28 pb-48">
     <TheSagnerHeader class="page-top-padding pb-16" :pageHeader="pageHeader"/>
     <ContentBox v-for="blocks in contentBoxStuff" :key="blocks.id" :contentBoxData="blocks"/>
   </main>

@@ -19,11 +19,12 @@
     <div class="text-sm font-normal leading-6 mb-9 px-7" v-html="trailInfo.content.rendered">
 
     </div>
-    <div class="bg-stGreen text-stCream uppercase font-semibold text-sm leading-4 w-full py-4 text-center">
-      <NuxtLink v-show="isHome" :to="{name: 'vandringsleder-landmark', params:{landmark:trailInfo.slug}}" >
+    <div class="text-stCream flex uppercase font-semibold text-sm leading-4 w-full  text-center">
+      <NuxtLink class="w-full py-4 bg-stGreen "  v-show="isHome" :to="{name: 'vandringsleder-landmark',
+      params:{landmark:trailInfo.slug}}" >
         Sevärdheter på slingan
       </NuxtLink>
-      <NuxtLink v-show="!isHome" :to="{name: 'vandringsleder-map', query:{name:trailInfo.slug}}" >
+      <NuxtLink class="w-full py-4 bg-stGreen "  v-show="!isHome" :to="{name: 'vandringsleder-map', query:{name:trailInfo.slug}}" >
         Se på kartan
       </NuxtLink>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-48 siteMaxWidth xl:px-36 lg:px-28 ">
+  <main class="py-48 siteMaxWidth xl:px-36 lg:px-28 ">
     <h1 class=" lora font-medium text-3xl text-center px-12 pb-14">Sevärheterna i Stockamöllan</h1>
 
     <section class="p-7 lg:py-7">
