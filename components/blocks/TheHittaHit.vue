@@ -1,5 +1,5 @@
 <template>
-  <section class="flex py-20  flex-col items-center lg:m-auto lg:items-start lg:max-w-4xl  lg:flex-row-reverse">
+  <section class="flex pt-40  flex-col items-center lg:m-auto lg:items-start lg:max-w-4xl  lg:flex-row-reverse">
     <div class="px-7 pb-7 lg:w-1/2 text-center lg:text-left">
       <h3 v-html="hittaHitCard.title" class=" lora font-medium text-3xl leading-9  "></h3>
       <div v-html="hittaHitCard.body" class="pt-12 "></div>
