@@ -9,11 +9,29 @@
 import axios from "axios";
 export default {
 
+  head() {
+    if(this.page) {
+      const metaArray = [];
+      this.page.yoast_meta.map(ele => {
+        metaArray.push({
+          hid: ele.name ? ele.name : ele.property,
+          name: ele.name ? ele.name : ele.property,
+          content: ele.content,
+        });
+      });
+
+      return {
+        title: this.page.yoast_title,
+        meta: metaArray,
+      }
+    }
+  },
+
   async asyncData ({ params }) {
     const { data } = await axios.get(
       `https://api.stockamollan.guide/wp-json/wp/v2/sagner?slug=${params.slug}`
     )
-    console.log(data)
+
     return { data }
   },
 
@@ -24,11 +42,15 @@ export default {
         intro: this.data[0].acf.kannetecken,
         vandringslederna: this.data[0].acf.vandringslederna,
         header_image: this.data[0].acf.header_image,
-        introduction: this.data[0].acf.introduktion
+        introduction: this.data[0].acf.introduktion,
+
       }
     },
     contentBoxStuff(){
       return this.data[0].acf.content_blocks
+    },
+    page(){
+      return this.data[0]
     }
   }
 

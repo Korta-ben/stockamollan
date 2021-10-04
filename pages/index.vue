@@ -67,15 +67,22 @@ import axios from "axios";
 
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 export default {
-  head: {
-    title: 'Home page',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Home page description'
+  head() {
+    if(this.page) {
+      const metaArray = [];
+      this.page.yoast_meta.map(ele => {
+        metaArray.push({
+          hid: ele.name ? ele.name : ele.property,
+          name: ele.name ? ele.name : ele.property,
+          content: ele.content,
+        });
+      });
+
+      return {
+        title: this.page.yoast_title,
+        meta: metaArray,
       }
-    ],
+    }
   },
 
   data() {
@@ -175,7 +182,8 @@ export default {
     return {
       headerCard : card.filter(o => o.card_type == "HeaderCard")[0],
       tipCard: card.filter(o => o.card_type == "TipsCard")[0],
-      hittaHitCard: card.filter(o => o.card_type == "HittaHitCard")[0]
+      hittaHitCard: card.filter(o => o.card_type == "HittaHitCard")[0],
+      page: data
     }
 
   },

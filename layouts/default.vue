@@ -19,5 +19,6 @@ export default {
   //   this.$store.commit('addHikingTrails', hikingTrails)
   //
   // },
+
 }
 </script>

@@ -15,6 +15,7 @@
 
 
 export default {
+
   data(){
     return {
         stories:this.$store.getters.getStories,
