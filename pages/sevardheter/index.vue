@@ -33,7 +33,7 @@
     <section class="p-7 lg:py-7 ">
       <h1 v-if="!landmarks.length" class="text-center">Sorry, No landmarks here!</h1>
       <TheLandmarkCard v-for="landmark in landmarks" :key="landmark.id" :landmark="landmark"
-                       class="mb-7 rounded-xl hover:shadow-2xl transition "/>
+                       class="mb-7  rounded-xl hover:shadow-2xl transition "/>
     </section>
   </main>
 

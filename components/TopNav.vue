@@ -1,13 +1,21 @@
 <template>
   <div class="fixed  w-full h-auto z-30">
     <div class=" bg-stLightGreen  py-8   make-it-blur">
-      <div class="flex justify-between  px-7 container-width z-20">
+      <div class="flex justify-between  px-7 md:container-width z-20">
         <div class="font-bold text-stCream uppercase text-xl leading-6">
+<!--          <div class="siteMaxWidth lg:pl-12  overflow-hidden">-->
+<!--            <div class="half-circle   make-it-blur ">-->
+<!--            </div>-->
+<!--            <NuxtLink to="/" class="fixed">-->
+<!--              <img src="~/assets/images/logo.svg" alt="STOCKAMÖLLAN" class="site-logo fixed  z-40">-->
+<!--            </NuxtLink>-->
+<!--          </div>-->
+          <div class="half-circle fixed bg-stGreen  ">
+            <NuxtLink to="/" >
+                            <img src="~/assets/images/logo.svg" alt="STOCKAMÖLLAN" class="site-logo  z-40">
+            </NuxtLink>
+          </div>
 
-          <NuxtLink to="/" class="fixed">
-
-            <span class="lg:hidden">Stockamöllan</span>
-          </NuxtLink>
         </div>
         <nav class="flex flex-col ">
           <div  class=" inline text-stCream  lg:hidden flex flex-row justify-end">
@@ -50,13 +58,7 @@
 
 
     </div>
-    <div class="siteMaxWidth pl-12 overflow-hidden hidden lg:block">
-      <div class="half-circle   make-it-blur ">
-      </div>
-      <NuxtLink to="/" class="fixed">
-      <img src="~/assets/images/logo.svg" alt="STOCKAMÖLLAN" class="site-logo fixed  z-40">
-        </NuxtLink>
-    </div>
+
 
   </div>
 

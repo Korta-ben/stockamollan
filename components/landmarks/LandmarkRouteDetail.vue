@@ -10,7 +10,7 @@
       </span>
       <ul class="flex">
         <li  v-for="icon in routeDetails.accessibility">
-          <span class="accessibility-icon bg-stGreen " :class="icon">
+          <span class="accessibility-icon bg-stGreen text-stGreen" :class="icon">
           </span>
         </li>
       </ul>

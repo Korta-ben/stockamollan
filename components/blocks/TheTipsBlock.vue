@@ -8,7 +8,7 @@
 
     </div>
     <div
-         class="text-center  leading-6 mx-8 text-stCream text-lg font-medium border-2 border-stCream flex" >
+         class="text-center  leading-6 mx-8 text-stCream text-lg font-medium border-2 border-stCream flex hover:bg-stCream hover:text-stGreen" >
       <NuxtLink :to="tipCard.linked_page"
                 v-html="tipCard.button_text"
                 class="py-3 w-full"

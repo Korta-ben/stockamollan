@@ -9,7 +9,7 @@ body{
   font-family: Lora, serif;
 }
 div.navicon{
-  @apply block w-8  relative mb-1 bg-stGreen rounded-3xl;
+  @apply block w-8  relative mb-1 bg-stCream rounded-3xl;
   transition: background .2s ease-out;
   height: 3px;
 }
@@ -20,8 +20,8 @@ div.navicon{
 
 .site-logo{
   width: 67px;
-  margin-top: -121px;
   margin-left: 22px;
+  margin-top: -10px;
 }
 .logo-bg-container{
   padding-left: 29px;
@@ -30,7 +30,6 @@ div.navicon{
   width: 111px;
   height: 111px;
   border-radius: 0 0 100% 100%;
-  margin-top:-62px;
 }
 
 .bg-trlYellow {
@@ -221,7 +220,7 @@ button.slick-prev:before{
       height:414px
     }
   .trails-wedgit{
-    top: 45%;
+    top: 30%;
   }
   .container-width{
     margin:0 auto;

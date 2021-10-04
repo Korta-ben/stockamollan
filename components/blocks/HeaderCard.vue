@@ -6,7 +6,7 @@
     cardInfo.image + ')'
     }">
     </div>
-    <div class=" w-4/5 pb-28 pr-7 pl-9 flex flex-col justify-center md:w-1/3">
+    <div class=" w-4/5 lg:pb-28 pb-16 pr-7 pl-9 flex flex-col justify-center md:w-1/3">
       <h1 v-html="cardInfo.title" class="text-stBrown font-medium text-3xl lora mt-20"></h1>
       <div v-html="cardInfo.body" ></div>
     </div>
