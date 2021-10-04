@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 px-7 pb-12 overflow-hidden">
       <div>
         <h2 class="font-medium text-xl leading-6 pb-5" v-html="contentBoxData.heading"></h2>
-        <div v-html="contentBoxData.content" class="text-sm leading-5  pb-12 "></div>
+        <div v-html="contentBoxData.content" class="text-sm leading-5  pb-12 pr-8"></div>
       </div>
       <div>
         <vue-masonry-wall :items="items" :options="options"  >
