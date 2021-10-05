@@ -45,12 +45,7 @@
                 {{ item.title }}
               </NuxtLink>
             </li>
-            <li  class="align-top text-right  font-semibold text-lg text-stCream py-2 lg:inline lg:px-2 hidden">
-              <NuxtLink to="/vandringsleder/map" class="accessibility-icon  map bg-stCream ">
 
-              </NuxtLink>
-
-            </li>
           </ul>
         </nav>
       </div>

@@ -16,7 +16,7 @@
       </p>
       <div class="text-sm text-stGreen  py-10 lg:py-0">
 
-          <div  class="flex">
+          <div  class="flex font-bold">
             <span  class="bg-stGreen tipIcon inline-block  w-5 h-5 mr-1.5 "> </span>
             <span >LÄS MER</span>
           </div>

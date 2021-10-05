@@ -3,8 +3,10 @@
     <h1 class=" lora font-medium text-3xl text-center px-12 pb-14">Sevärheterna i Stockamöllan</h1>
 
     <section class="p-7 lg:py-7">
-      <div v-for="landmark in landmarks" :key="landmark.id"
-                       class="mb-7 rounded-xl hover:shadow-2xl transition">
+      <NuxtLink v-for="landmark in landmarks" :key="landmark.id"
+                       class="mb-7 block rounded-xl hover:shadow-2xl transition"
+                :to="{ name: 'sevardheter-slug', params: { slug: landmark.post_name } }"
+      >
 
           <div class="bg-stLightGreen text-xl leading-6 pb-5 rounded-xl lg:flex lg:place-content-center lg:pb-0">
             <div class="lg:w-1/3 flex">
@@ -21,17 +23,16 @@
 
               </p>
               <div class="text-sm text-stGreen flex justify-between py-10 lg:py-0">
-                <div class="flex ">
-                  <NuxtLink :to="{ name: 'sevardheter-slug', params: { slug: landmark.post_name } }">
+                <div class="flex font-bold">
+
                     <span  class="bg-stGreen tipIcon inline-block  w-5 h-5 mr-1.5 "> </span>
                     <span >LÄS MER</span>
-                  </NuxtLink>
+
                 </div>
-                <div>SÄGEN</div>
               </div>
             </div>
         </div>
-      </div>
+      </NuxtLink>
     </section>
   </main>
 

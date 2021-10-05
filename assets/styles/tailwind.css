@@ -13,6 +13,8 @@ div.navicon{
   transition: background .2s ease-out;
   height: 3px;
 }
+
+
 .siteMaxWidth{
   @apply  m-auto;
  max-width: 1440px
@@ -210,7 +212,7 @@ button.slick-prev:before{
   }
 
   .contain-offset{
-    padding-top: 96px !important;
+    padding-top: 92px !important;
   }
 
 }
