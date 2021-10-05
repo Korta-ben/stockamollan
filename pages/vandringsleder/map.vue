@@ -11,7 +11,10 @@
           type="checkbox"
           :id="trail.id"
           hidden
-          @click="updateLayerVisibility(trail);">
+          @click="updateLayerVisibility(trail);"
+          :checked="($route.query.name == undefined ||
+          $route.query.name  === trail.slug)"
+          >
           <label
             class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5 mappage-route-visibility"
             :for="trail.id">

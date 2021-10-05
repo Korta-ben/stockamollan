@@ -239,10 +239,10 @@ button.slick-prev:before{
 
 
 .trails-wedgit input[type="checkbox"] + label{
-  opacity: 1 !important;
+  opacity: 0.5 !important;
 }
 .trails-wedgit input[type="checkbox"]:checked + label{
-  opacity: 0.5 !important;
+  opacity: 1 !important;
 }
 .trail-shadow{
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
