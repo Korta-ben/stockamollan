@@ -27,6 +27,7 @@ export default {
     }
   },
 
+  // to be optimized, get the data from store not with api calls
   async asyncData ({ params }) {
     const { data } = await axios.get(
       `https://api.stockamollan.guide/wp-json/wp/v2/sevardheter?slug=${params.slug}`

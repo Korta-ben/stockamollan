@@ -64,6 +64,9 @@ export default {
     },
     landmarkHighlights(){
       return this.pageData?.acf.kannetecken || ''
+    },
+    cordinates(){
+      return [this.pageData?.acf.longitude || '', this.pageData?.acf.latitude || '' ]
     }
   },
   mounted() {
@@ -74,9 +77,10 @@ export default {
       mapboxgl.accessToken = apiSecret
       this.map = new mapboxgl.Map({
         container: 'map',
-        style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu',
+        // style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu'
+        style:'mapbox://styles/ashish64/ckt2pjn1o27yd18nz0okz8p2b',
         zoom:18,
-        center:[13.368970, 55.950494]
+        center:this.cordinates
       })
     },
 

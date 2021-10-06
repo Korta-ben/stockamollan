@@ -15,6 +15,18 @@
 
 
 export default {
+  head() {
+    return {
+      title: "Sägner",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Sägner'
+        }
+      ]
+    }
+  },
 
   data(){
     return {

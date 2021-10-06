@@ -42,6 +42,18 @@
 <script>
 
 export default {
+  head() {
+    return {
+      title: "Sevärheterna i Stockamöllan",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Sevärheterna i Stockamöllan'
+        }
+      ]
+    }
+  },
   data() {
     return {
       landmarks:this.$store.getters.getLandmarks,
