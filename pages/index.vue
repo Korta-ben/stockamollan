@@ -25,10 +25,10 @@
             </div>
             <div class="py-7 px-6 w-2/3  bg-stLightGreen	rounded-r-xl">
               <h2 v-html="landmark.title.rendered" class="pb-5 text-lg font-semibold break-words"></h2>
-              <p v-html="landmark.acf.kannetecken" class="pb-7 text-sm"></p>
+              <p v-html="landmark.acf.kannetecken" class=" text-sm h-20 overflow-hidden"></p>
 
               <NuxtLink :to="{ name: 'sevardheter-slug', params: { slug: landmark.slug } }"
-                        class="flex justify-items-start justify-items-start text-sm font-semibold text-stGreen">
+                        class="flex justify-items-start justify-items-start text-sm font-semibold text-stGreen pt-7">
                 <span  class="bg-stGreen tipIcon  inline-block  w-5 h-5 mr-1.5 "> </span>
                 LÄS MER
               </NuxtLink>

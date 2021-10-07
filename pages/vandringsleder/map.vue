@@ -72,7 +72,10 @@ export default {
         container: 'map',
         style:'mapbox://styles/ashish64/ckt2pjn1o27yd18nz0okz8p2b',
         zoom:13.5,
-        center:[13.374228, 55.945831],
+        center:[
+          13.383094762121942,
+          55.95009133934795
+        ],
         displayControlsDefault: false,
       })
 

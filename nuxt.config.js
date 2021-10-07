@@ -24,6 +24,16 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css' }
     ],
+    script: [
+      {
+        'type': 'text/javascript',
+        'src': 'https://cdn.usefathom.com/script.js',
+        'data-site':'QJHCMXDF',
+          'data-spa':'auto',
+          'defer':true
+      }
+
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
