@@ -62,6 +62,13 @@ export default {
 
     this.trails.forEach(o => this.addMapboxLayer(o));
 
+    // add trail popups here
+
+    // this.addLandmarkPopUps(this.landmarks);
+    this.landmarks.forEach(o => this.addLandmarkPopUps(o));
+
+
+
 
   },
 
@@ -96,7 +103,6 @@ export default {
     },
 
     addMapboxLayer(layer){
-      console.log(this.$route)
 
       let trace = (this.$route.query.name == undefined || this.$route.query.name  === layer.slug) ? "visible" : "none"
 
@@ -126,6 +132,74 @@ export default {
 
     },
 
+    addLandmarkPopUps(landmark){
+
+      console.log(landmark)
+
+      this.map.on('load', () =>{
+          this.map.addSource(landmark.slug+landmark.id, {
+            'type': 'geojson',
+            'data':{
+              'type': 'FeatureCollection',
+              'features': [
+                {
+                  'type': 'Feature',
+                  'properties': {
+                    'label': landmark.title.rendered,
+                    'description': landmark.acf.kannetecken + '<br>Learn more about <a href="/sevardheter/'+
+                      landmark.slug +'"><b>' +
+                      landmark.title.rendered+
+                      '</b></a> here!'  ,
+                    'icon': 'landmarks'
+                  },
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': [landmark.acf.longitude, landmark.acf.latitude]
+                  }
+                }
+                ]
+            }
+          });
+          this.map.addLayer({
+            'id': landmark.slug+landmark.id,
+            'type': 'symbol',
+            'source': landmark.slug+landmark.id,
+            'layout': {
+              'text-field': ['get', 'label'],
+              'text-offset':[0,2.3],
+              'icon-image': '{icon}',
+              'icon-allow-overlap': true,
+              'text-size' : 13,
+            }
+          });
+
+
+        this.map.on('click', landmark.slug+landmark.id, (e) => {
+
+          const coordinates = e.features[0].geometry.coordinates.slice();
+          const description = e.features[0].properties.description;
+
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+         new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+           .addTo(this.map)
+        });
+
+        this.map.on('mouseenter', landmark.slug+landmark.id, () => {
+          this.map.getCanvas().style.cursor = 'pointer';
+        });
+
+        this.map.on('mouseleave', landmark.slug+landmark.id, () => {
+          this.map.getCanvas().style.cursor = '';
+        });
+
+      })
+    },
+
 
 
 
@@ -145,3 +219,10 @@ export default {
 
 }
 </script>
+<style>
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+</style>

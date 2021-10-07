@@ -86,7 +86,6 @@ export default {
       mapboxgl.accessToken = apiSecret
       this.map = new mapboxgl.Map({
         container: 'map',
-        // style:'mapbox://styles/ashish64/ckrq20mqo0drn18mno0rxyfpu'
         style:'mapbox://styles/ashish64/ckt2pjn1o27yd18nz0okz8p2b',
         zoom:18,
         center:this.cordinates
