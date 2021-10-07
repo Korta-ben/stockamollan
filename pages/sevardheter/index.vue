@@ -65,9 +65,13 @@ export default {
   methods:{
     filterLandmakrs(trailId){
 
-      this.landmarks = this.$store.getters.getLandmarks.filter( l =>
+      //get the one that appear in trail
+      let onTheTrail = this.$store.getters.getLandmarks.filter(o => o.acf.vandringslederna)
+      // filter the above against trailID
+      this.landmarks = onTheTrail.filter( l =>
          l.acf.vandringslederna.filter( v => v.ID == trailId).pop()
-    )
+      )
+
     },
     allLandmarks(){
       this.landmarks = this.$store.getters.getLandmarks
