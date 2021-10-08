@@ -1,20 +1,11 @@
 <template>
   <div class="border-b lg:border-0 border-stGreen pt-3">
-    <span class="w-4 h-4 mr-4  rounded-full inline-block" :class="vandringslederna.colour.value"> </span>
-    <span class="text-stBrown text-xl font-medium leading-6">{{ vandringslederna.colour.label }}</span>
-    <div class="flex mb-3 lg:pt-3 lg:pb-0 py-3 mt-6 mb-auto items-center -ml-4">
-
-        <span class="accessibility-icon distance bg-stGreen flex-shrink-0">
-        </span>
-      <span class="text-sm text-stGreen  font-medium leading-4">CA {{ vandringslederna.distance }} KM</span>
-
-      <ul class="flex ">
-        <li  v-for="icon in vandringslederna.accessibility" :key="icon.id" class="pt-1">
-          <span class="accessibility-icon bg-stGreen " :class="icon">
-          </span>
-        </li>
-      </ul>
-    </div>
+    <ul>
+      <li v-for="trail in vandringslederna">
+        <span class="w-4 h-4 mr-4  rounded-full inline-block" :class="trail.acf.colour.value"> </span>
+        <span class="text-stBrown text-xl font-medium leading-6">{{ trail.acf.colour.label }}</span>
+      </li>
+    </ul>
   </div>
 </template>
 

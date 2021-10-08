@@ -13,20 +13,41 @@
           class="bg-stLightGreen px-11 pt-11  rounded-t-xl  flex flex-col content-center lg:pt-5 lg:rounded-t-none lg:w-3/4 lg:rounded-l-2xl md:flex-wrap md:flex-row lg:h-64">
           <div class="md:w-1/2 md:pr-10 lg:pl-20" v-if="pageData.acf.vandringslederna">
             <span class="font-medium text-xl" >Hittas på slinga</span>
-            <LandmarkRouteDetail  :routeDetails="routeStuff"  class="pt-3.5"/>
+            <LandmarkRouteDetail :routeDetails="pageData.acf.vandringslederna"  class="pt-3.5"/>
+
+                <div class="flex mb-5 border-t border-stGreen pt-6 mt-6 items-center	">
+                  <span class="accessibility-icon distance bg-stGreen flex-shrink-0">
+                  </span>
+                  <span class="text-sm text-stGreen  font-medium leading-4">CA {{ pageData.acf.distance }} KM</span>
+                  <ul class="flex" v-if="pageData.acf.accessibility" >
+                    <li  v-for="icon in pageData.acf.accessibility" :key="icon.id"
+                         class="pt-1">
+                  <span class="accessibility-icon bg-stGreen " :class="icon">
+                  </span>
+                    </li>
+                  </ul>
+                </div>
+
 
           </div>
-          <div class="md:w-1/2 md:px-10 lg:pr-20 flex flex-col">
-            <h4 class="font-medium text-xl leading-6 pb-3.5">Kännetecken</h4>
-            <p v-html="landmarkHighlights" class="text-sm leading-5 pb-9"></p>
-            <ul class="flex " v-if="!pageData.acf.vandringslederna" >
-              <li  v-for="icon in pageData.acf.accessibility" :key="icon.id"
-                   class="pt-1">
-          <span class="accessibility-icon bg-stGreen " :class="icon">
-          </span>
-              </li>
-            </ul>
-          </div>
+            <div class="md:w-1/2 md:px-10 lg:pr-20 flex flex-col">
+              <h4 class="font-medium text-xl leading-6 pb-3.5">Kännetecken</h4>
+              <p v-html="landmarkHighlights" class="text-sm leading-5 pb-9"></p>
+
+              <div class="flex mb-3 lg:pt-3 lg:pb-0 py-3 mb-auto items-center -ml-4"
+                   v-if="!pageData.acf.vandringslederna">
+                  <span class="accessibility-icon distance bg-stGreen flex-shrink-0">
+                  </span>
+                          <span class="text-sm text-stGreen  font-medium leading-4">CA {{ pageData.acf.distance }} KM</span>
+                <ul class="flex" v-if="pageData.acf.accessibility" >
+                  <li  v-for="icon in pageData.acf.accessibility" :key="icon.id"
+                       class="pt-1">
+                  <span class="accessibility-icon bg-stGreen " :class="icon">
+                  </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
         <div id="map" class="w-full lg:w-1/4 h-64">

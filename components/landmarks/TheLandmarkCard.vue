@@ -8,14 +8,20 @@
     <div
       class="  pt-14 px-7 2xl:px-24  dxl:pl-24 lg:pl-16  dxl:pr-16 lg:w-1/3 lg:py-12 lg:flex lg:flex-col justify-between" >
       <h3 class="font-medium text-2xl" v-html="landmark.title.rendered"></h3>
-      <TheLandmarkRouteInfo v-if="landmark.acf.vandringslederna"  :vandringslederna="landmark.acf.vandringslederna[0].acf"/>
-      <ul class="flex " v-if="!landmark.acf.vandringslederna" >
-        <li  v-for="icon in landmark.acf.accessibility" :key="icon.id"
-            class="pt-1">
+      <TheLandmarkRouteInfo v-if="landmark.acf.vandringslederna"  :vandringslederna="landmark.acf.vandringslederna"/>
+      <div class="flex mb-3 lg:pt-3 lg:pb-0 py-3 mt-6 mb-auto items-center -ml-4">
+        <span class="accessibility-icon distance bg-stGreen flex-shrink-0">
+        </span>
+        <span class="text-sm text-stGreen  font-medium leading-4">CA {{ landmark.acf.distance }} KM</span>
+        <ul class="flex "  >
+          <li  v-for="icon in landmark.acf.accessibility" :key="icon.id"
+               class="pt-1">
           <span class="accessibility-icon bg-stGreen " :class="icon">
           </span>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+
     </div>
     <div class="px-8 lg:pr-20 lg:w-1/3 lg:flex lg:flex-col lg:justify-between lg:pl-4 lg:py-12">
       <h3 class="hidden lg:block text-xl font-medium">Kännetecken</h3>

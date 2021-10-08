@@ -15,7 +15,19 @@
             </div >
             <div class=" pt-10 px-7 lg:px-24 lg:w-1/3 lg:py-5 lg:flex lg:flex-col " >
               <h3 class="font-medium text" v-html="landmark.post_title"></h3>
-              <TheLandmarkRouteInfo  :vandringslederna="landmark.acf.vandringslederna[0].acf"/>
+              <TheLandmarkRouteInfo v-if="landmark.acf.vandringslederna" :vandringslederna="landmark.acf.vandringslederna"/>
+              <div class="flex mb-3 lg:pt-3 lg:pb-0 py-3 mt-6 mb-auto items-center -ml-4">
+                <span class="accessibility-icon distance bg-stGreen flex-shrink-0">
+                </span>
+                        <span class="text-sm text-stGreen  font-medium leading-4">CA {{ landmark.acf.distance }} KM</span>
+                        <ul class="flex "  >
+                          <li  v-for="icon in landmark.acf.accessibility" :key="icon.id"
+                               class="pt-1">
+                  <span class="accessibility-icon bg-stGreen " :class="icon">
+                  </span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="px-7 lg:pr-24 lg:w-1/3 lg:flex lg:flex-col lg:justify-between lg:py-5">
               <h3 class="hidden lg:block text-xl font-medium">Kännetecken</h3>
@@ -50,7 +62,15 @@ export default {
 
   computed:{
     landmarks(){
+
+      // let spots = this.$store.getters.getLandmarks.filter(o => o.acf.vandringslederna)
+      // return spots.filter( l => l.acf.vandringslederna.filter( v => v.post_name === this.$route.params.landmark).pop)
+      //   console.log(this.trails.filter(o => o.slug === this.$route.params.landmark)[0].acf)
       return this.trails.filter(o => o.slug === this.$route.params.landmark)[0].acf?.sevardheter
+      // let onTheTrail = this.$store.getters.getLandmarks.filter(o => o.acf.vandringslederna)
+      // return onTheTrail.filter( l =>
+      //   l.acf.vandringslederna.filter( v => v.slug == this.$route.params.landmark).pop())
+
     }
   }
 

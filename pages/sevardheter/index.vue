@@ -19,12 +19,9 @@
           class="md:col-span-3 sm:col-span-2  text-stGreen font-semibold text-lg leading-7 pt-4 pb-8"
                 @click="allLandmarks"
         >
-
           Visa allt
         </button>
-
       </div>
-
     </div>
 
 
@@ -64,19 +61,16 @@ export default {
 
   methods:{
     filterLandmakrs(trailId){
-
       //get the one that appear in trail
       let onTheTrail = this.$store.getters.getLandmarks.filter(o => o.acf.vandringslederna)
       // filter the above against trailID
       this.landmarks = onTheTrail.filter( l =>
          l.acf.vandringslederna.filter( v => v.ID == trailId).pop()
       )
-
     },
     allLandmarks(){
       this.landmarks = this.$store.getters.getLandmarks
     }
-
   }
 
 

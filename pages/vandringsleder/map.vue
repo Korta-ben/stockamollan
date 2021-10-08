@@ -5,9 +5,8 @@
     <div class="py-3 absolute object-left trails-wedgit z-10">
       <ul>
 
-        <li v-for="trail in trails" :key="trail.id"
-
-        > <input
+        <li v-for="trail in trails" :key="trail.id">
+          <input
           type="checkbox"
           :id="trail.id"
           hidden
@@ -36,7 +35,15 @@
 import mapboxgl from 'mapbox-gl'
 import axios from "axios";
 export default {
-
+  head:{
+    title: 'Upptäck äventyret i vackra Stockamöllan',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Upptäck äventyret i vackra Stockamöllan' },
+      { name: 'format-detection', content: 'telephone=no' }
+    ],
+  },
 
   data() {
     return {
@@ -53,7 +60,6 @@ export default {
   },
 
   created(){
-
   },
 
 
@@ -223,6 +229,10 @@ export default {
 .mapboxgl-popup {
   max-width: 400px;
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+.mapboxgl-popup-close-button{
+  padding:2px 5px;
+  font-weight: bold;
 }
 
 </style>
