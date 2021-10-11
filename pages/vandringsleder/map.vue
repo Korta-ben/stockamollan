@@ -68,9 +68,6 @@ export default {
 
     this.trails.forEach(o => this.addMapboxLayer(o));
 
-    // add trail popups here
-
-    // this.addLandmarkPopUps(this.landmarks);
     this.landmarks.forEach(o => this.addLandmarkPopUps(o));
 
 
@@ -140,7 +137,7 @@ export default {
 
     addLandmarkPopUps(landmark){
 
-      console.log(landmark)
+
 
       this.map.on('load', () =>{
           this.map.addSource(landmark.slug+landmark.id, {

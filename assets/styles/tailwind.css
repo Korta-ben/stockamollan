@@ -9,11 +9,23 @@ body{
   font-family: Lora, serif;
 }
 div.navicon{
-  @apply block w-8  relative mb-1 bg-stCream rounded-3xl;
+  @apply block w-8  relative mb-1  rounded-3xl;
   transition: background .2s ease-out;
   height: 3px;
 }
 
+
+.toggle-top{
+  transform: rotate(
+    45deg);
+  top: 7px;
+}
+
+.toggle-bottom{
+  transform: rotate(
+    -45deg);
+  top: -7px;
+}
 
 .siteMaxWidth{
   @apply  m-auto;
@@ -21,8 +33,8 @@ div.navicon{
 }
 
 .site-logo{
-  width: 67px;
-  margin-left: 22px;
+  width: 44px;
+  margin-left: 0px;
   margin-top: -10px;
 }
 .logo-bg-container{
@@ -111,6 +123,27 @@ div.navicon{
   /*background-image: url('~/assets/images/stroller.svg');*/
 }
 
+.pushable{
+
+  border-radius: 12px;
+  border: 2px solid #34401a;
+  padding:9px 10px;
+  cursor: pointer;
+}
+
+pushable:hover{
+  background: #34401a !important;
+}
+
+
+.map-alternative {
+  mask-image: url('~/assets/images/map-2.svg');
+  -webkit-mask-image: url('~/assets/images/map-2.svg');
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  /*background-image: url('~/assets/images/stroller.svg');*/
+}
+
 /*landmarks header custom styles*/
 .landmark-custom{
   height: 264px;
@@ -187,11 +220,28 @@ button.slick-prev:before{
   height: 50%;
   border: black solid 2px;
 }
+@screen sm{
+
+
+}
 @screen  md{
+  .site-logo{
+    width: 67px;
+    margin-left: 22px;
+    margin-top: -10px;
+  }
   .header-bg{
     @apply bg-no-repeat bg-bottom w-2/3;
 
   }
+  .pushable{
+
+    border-radius: 12px;
+    border: 2px solid #34401a;
+    padding:9px 30px;
+    cursor: pointer;
+  }
+
 
 
 }
