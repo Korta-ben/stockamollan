@@ -25,14 +25,15 @@
 
 
 
-            <div
+            <button @click="showMenu = !showMenu"
+              @blur="showMenu = !showMenu"
               class="inline lg:hidden flex flex-col place-content-center pl-9"
-              @click="showMenu = !showMenu"
+              for="menu-toggle"
             >
               <div class="navicon navico1 ml-auto" />
               <div class="navicon navico2 ml-auto" />
               <div class="navicon navico3 ml-auto" />
-            </div>
+            </button>
 
           </div>
 
