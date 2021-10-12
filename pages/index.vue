@@ -16,7 +16,7 @@
         <div class="flex flex-row px-5" v-for="landmark in landmarks"
              :key="landmark.id">
           <div class=" flex  slider-width "  >
-            <div class=" bg-center bg- bg-top w-1/3 rounded-l-xl object-cover bg-no-repeat"  v-bind:style="{
+            <div class=" bg-center bg-cover bg-top w-1/3 rounded-l-xl object-cover bg-no-repeat"  v-bind:style="{
               'background-image':
             'url(' +
     landmark.acf.header_image + ')'

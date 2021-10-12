@@ -34,7 +34,8 @@ export const actions = {
       const  landmarks  = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/sevardheter?per_page=100&orderby=title&order=asc`)
       const stories  = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/sagner?per_page=100&orderby=title&order=asc`)
 
-      commit('setHikingTrails', hikingTrails.data.sort( (a, b) => b.acf.position.localeCompare(a.acf.position) ));
+      // commit('setHikingTrails', hikingTrails.data.sort( (a, b) => b.acf.position.localeCompare(a.acf.position) ));
+      commit('setHikingTrails', hikingTrails.data);
       commit('setlandmarks', landmarks.data);
       commit('setStories', stories.data);
 

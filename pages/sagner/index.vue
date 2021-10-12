@@ -5,7 +5,7 @@
       Var det verkligen Magnus Stenbock som såg till att Stenbocksstenen restes? Varför regnar det aldrig in på Stättan
       och vad är egentligen historien bakom gatlampan på Torget? Besök Stockamöllan med nya ögon och kliv in i värld av
       älvor, troll, vättar och andra väsen.    </p>
-    <section class="p-7 flex  items-center flex-col md:flex-row md:justify-evenly md:flex-wrap">
+    <section class="p-7 flex  items-center flex-col md:flex-row md:justify-evenly md:flex-wrap gap-8">
         <TheSangerCard v-for="story in stories" :key="story.id" :story="story" class="hover:shadow-2xl transition"/>
     </section>
   </main>
