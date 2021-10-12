@@ -154,8 +154,8 @@ export default {
                   'type': 'Feature',
                   'properties': {
                     'label': landmark.title.rendered,
-                    'description': landmark.acf.kannetecken + '<br>Learn more about <a href="/sevardheter/'+
-                      landmark.slug +'"><b>' +
+                    'description': landmark.acf.kannetecken + '' +
+                    '<br>Learn more about <a href="/'+landmark.type+'/'+landmark.slug +'"><b>' +
                       landmark.title.rendered+
                       '</b></a> here!'  ,
                     'icon': landmark.type === "sevardheter"? 'landmarks':'troll-stories'
