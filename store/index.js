@@ -30,9 +30,9 @@ export const actions = {
   async storeDispatchFunc({ commit }) {
     try{
 
-      const  hikingTrails  = await axios.get('https://api.stockamollan.guide/wp-json/wp/v2/vandringslederna')
-      const  landmarks  = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/sevardheter/`)
-      const stories  = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/sagner`)
+      const  hikingTrails  = await axios.get('https://api.stockamollan.guide/wp-json/wp/v2/vandringslederna?per_page=100&orderby=title&order=asc')
+      const  landmarks  = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/sevardheter?per_page=100&orderby=title&order=asc`)
+      const stories  = await axios.get(`https://api.stockamollan.guide/wp-json/wp/v2/sagner?per_page=100&orderby=title&order=asc`)
 
       commit('setHikingTrails', hikingTrails.data.sort( (a, b) => b.acf.position.localeCompare(a.acf.position) ));
       commit('setlandmarks', landmarks.data);

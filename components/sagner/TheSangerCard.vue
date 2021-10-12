@@ -1,5 +1,6 @@
 <template>
-    <NuxtLink :to="{ name: 'sagner-slug', params: { slug: story.slug } }"  class="max-w-xs max-h-80 w-80 h-80 mb-8 flex items-end rounded-2xl md:w-1/2"
+    <NuxtLink :to="{ name: 'sagner-slug', params: { slug: story.slug } }"
+              class="max-w-xs max-h-80 w-80 h-80 mb-8 flex items-end rounded-2xl md:w-1/2 bg-center bg-cover"
          v-bind:style="{ 'background-image': 'url(' + story.acf.header_image + ')'
     }"
     >

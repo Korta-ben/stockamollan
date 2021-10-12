@@ -6,7 +6,7 @@
 
           <div class="half-circle fixed md:bg-stGreen bg-transparent ">
             <NuxtLink to="/" >
-                            <img src="~/assets/images/logo.svg" alt="STOCKAMÖLLAN" class="site-logo  sm:w-12 z-40">
+                            <img src="~/assets/images/logo.svg" alt="STOCKAMÖLLAN" class="site-logo ease-in-out sm:w-12 z-40">
             </NuxtLink>
           </div>
 
@@ -33,7 +33,7 @@
               </div>
 
 <!--              <input id="menu-toggle" @focus="showMenu = !showMenu" type="checkbox"  :checked="{checked : showMenu}">-->
-                <ul :class="{hidden : showMenu}"   class="animate-fade-in-down absolute p-4 right-6 bg-stGreen"
+                <ul  class="animate-fade-in-down absolute p-4 right-6 bg-stGreen"
                 >
                   <li v-for="(item, i) in menuItems" :key="i"
                       class="align-top text-right  font-semibold text-lg text-stCream py-2 lg:inline lg:px-2">
@@ -51,7 +51,7 @@
 
 
 
-          <ul  class="animate-fade-in-down lg:flex items-center hidden "
+          <ul   class="animate-fade-in-down lg:flex items-center hidden gap-x-3.5"
               >
             <li v-for="(item, i) in menuItems" :key="i"
                 class="align-top text-right  font-semibold text-lg text-stCream lg:inline lg:px-2">

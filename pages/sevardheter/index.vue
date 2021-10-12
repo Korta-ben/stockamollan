@@ -1,10 +1,9 @@
 <template>
   <main class="py-48 siteMaxWidth xl:px-36 lg:px-28 mb-48">
-    <h1 class=" lora font-medium text-3xl text-center px-12 pb-4">Sevärheterna i Stockamöllan</h1>
+    <h1 class=" lora font-medium text-3xl text-center px-12 pb-4">Sevärhetern i Stockamöllan</h1>
     <div class="max-w-2xl mx-auto text-center px-5">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-      </p>
+        Stockamöllan är rik på både kultur och historia. Kungligheter, arbetare och snapphanar har varit en del av platsen i flera hundra år. Här finns en lista över sevärdheter i och i närheten av Stockamöllan. Både längs med vandringslederna och strax utanför.      </p>
       <h3 class="text-stGreen text-base font-bold leading-6 pt-11 pb-8">FILTRERA:</h3>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <button v-for="trail in trails" :key="trail.index"
@@ -12,7 +11,9 @@
                 @click="filterLandmakrs(trail.id)"
         >
 
-          {{ trail.acf.colour.label }} slinga
+           <span
+             class="circle-route-icon w-4 h-4 mr-4  rounded-full inline-block border-trlYellow"
+             :class="trail.acf.colour.value"> </span>{{ trail.acf.colour.label }} slinga
         </button>
 
         <button
@@ -41,12 +42,12 @@
 export default {
   head() {
     return {
-      title: "Sevärheterna i Stockamöllan",
+      title: "Sevärdheter i Stockamöllan",
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Sevärheterna i Stockamöllan'
+          content: 'Sevärdheter i Stockamöllan'
         }
       ]
     }

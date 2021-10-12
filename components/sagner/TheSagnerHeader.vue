@@ -4,7 +4,7 @@
     <p class="text-center text-sm" v-html="pageHeader.intro"></p>
     <TheSagneRouteDetails :routeDetails="pageHeader.vandringslederna[0].acf"/>
     <div class="flex gap-8 items-center">
-      <img :src="pageHeader.header_image" class="rounded-full max-w-xs w-80">
+      <img :src="pageHeader.header_image" class=" max-w-xs w-80">
       <div v-html="pageHeader.introduction"></div>
     </div>
   </div>

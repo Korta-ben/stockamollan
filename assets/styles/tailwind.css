@@ -46,6 +46,9 @@ div.navicon{
   border-radius: 0 0 100% 100%;
 }
 
+.bg-trlPink {
+  background-color:#FF8DDF;
+}
 .bg-trlYellow {
   background-color:#FBE159;
 }

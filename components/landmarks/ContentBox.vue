@@ -6,7 +6,7 @@
         <div v-html="contentBoxData.content" class="text-sm leading-5  pb-12 pr-8"></div>
       </div>
       <div>
-        <vue-masonry-wall :items="items" :options="options"  >
+        <vue-masonry-wall v-if="items" :items="items" :options="options"  >
           <template v-slot:default="{item}" class="">
             <div class="item">
               <img :src="item.Select"  class="w-full " >

@@ -15,7 +15,7 @@
           $route.query.name  === trail.slug)"
           >
           <label
-            class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex pl-3.5 mappage-route-visibility"
+            class="w-auto md:w-52 text-stGreen bg-white py-3.5 my-2 font-medium flex items-center pl-3.5 mappage-route-visibility"
             :for="trail.id">
             <span
               class="circle-route-icon w-4 h-4 mr-4  rounded-full inline-block border-trlYellow"

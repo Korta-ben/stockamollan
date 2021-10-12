@@ -10,9 +10,9 @@
       <h3 class="font-medium text-2xl" v-html="landmark.title.rendered"></h3>
       <TheLandmarkRouteInfo v-if="landmark.acf.vandringslederna"  :vandringslederna="landmark.acf.vandringslederna"/>
       <div class="flex mb-3 lg:pt-3 lg:pb-0 py-3 mt-6 mb-auto items-center -ml-4">
-        <span class="accessibility-icon distance bg-stGreen flex-shrink-0">
-        </span>
-        <span class="text-sm text-stGreen  font-medium leading-4">CA {{ landmark.acf.distance }} KM</span>
+<!--        <span class="accessibility-icon distance bg-stGreen flex-shrink-0">-->
+<!--        </span>-->
+<!--        <span class="text-sm text-stGreen  font-medium leading-4">CA {{ landmark.acf.distance }} KM</span>-->
         <ul class="flex "  >
           <li  v-for="icon in landmark.acf.accessibility" :key="icon.id"
                class="pt-1">

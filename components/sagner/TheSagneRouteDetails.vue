@@ -5,11 +5,11 @@
     <span class="text-stBrown text-sm font-medium leading-6">{{ routeDetails.colour.label }}</span>
 
     <div class="flex mb-5  pt-6 mt-6 justify-center">
-      <span class="text-sm font-medium leading-4 flex items-center border-r pr-4">
-          <span class="accessibility-icon bg-stBrown distance">
-          </span>
-        CA {{ routeDetails.distance }}
-      </span>
+<!--      <span class="text-sm font-medium leading-4 flex items-center border-r pr-4">-->
+<!--          <span class="accessibility-icon bg-stBrown distance">-->
+<!--          </span>-->
+<!--        CA {{ routeDetails.distance }}-->
+<!--      </span>-->
       <ul class="flex">
         <li  v-for="icon in routeDetails.accessibility" :key="icon.id">
           <span class="accessibility-icon bg-stBrown " :class="icon">
