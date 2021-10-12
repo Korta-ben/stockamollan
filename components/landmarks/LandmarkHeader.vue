@@ -10,7 +10,8 @@
       <h1 v-html="headerTitle" class="lora font-medium lg:text-5xl text-3xl text-stCream pb-9"></h1>
       <div class="flex flex-col lg:flex-row">
         <div
-          class="bg-stLightGreen px-11 pt-11  rounded-t-xl  flex flex-col content-center lg:pt-5 lg:rounded-t-none lg:w-3/4 lg:rounded-l-2xl md:flex-wrap md:flex-row lg:h-64">
+          class="bg-stLightGreen px-11 pt-11  rounded-t-xl  flex flex-col content-center
+          lg:pt-5 lg:rounded-t-none lg:w-3/4 lg:rounded-l-2xl md:flex-wrap md:flex-row lg:h-64">
           <div class="md:w-1/2 md:pr-10 lg:pl-20" v-if="pageData.acf.vandringslederna">
             <span class="font-medium text-xl" >Hittas på slinga</span>
             <LandmarkRouteDetail :routeDetails="pageData.acf.vandringslederna"  class="pt-3.5"/>
