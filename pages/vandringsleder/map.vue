@@ -155,9 +155,9 @@ export default {
                   'properties': {
                     'label': landmark.title.rendered,
                     'description': landmark.acf.kannetecken + '' +
-                    '<br>Learn more about <a href="/'+landmark.type+'/'+landmark.slug +'"><b>' +
+                    '<br>Läs mer om <a href="/'+landmark.type+'/'+landmark.slug +'"><b>' +
                       landmark.title.rendered+
-                      '</b></a> here!'  ,
+                      '</b></a> här!'  ,
                     'icon': landmark.type === "sevardheter"? 'landmarks':'troll-stories'
                   },
                   'geometry': {
