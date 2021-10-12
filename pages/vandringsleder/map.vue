@@ -53,6 +53,7 @@ export default {
       },
       trails:this.$store.getters.getHikingTrails,
       landmarks:this.$store.getters.getLandmarks,
+      sagner: this.$store.getters.getStories,
       isDisabled:false
 
 
@@ -69,6 +70,13 @@ export default {
     this.trails.forEach(o => this.addMapboxLayer(o));
 
     this.landmarks.forEach(o => this.addLandmarkPopUps(o));
+
+    this.sagner.forEach(o =>{
+        if(o.acf.latitude !== "0" && o.acf.longitude !== "0"){
+          console.log(o)
+          this.addLandmarkPopUps(o)
+        }
+    });
 
 
 
@@ -136,9 +144,6 @@ export default {
     },
 
     addLandmarkPopUps(landmark){
-
-
-
       this.map.on('load', () =>{
           this.map.addSource(landmark.slug+landmark.id, {
             'type': 'geojson',
@@ -153,7 +158,7 @@ export default {
                       landmark.slug +'"><b>' +
                       landmark.title.rendered+
                       '</b></a> here!'  ,
-                    'icon': 'landmarks'
+                    'icon': landmark.type === "sevardheter"? 'landmarks':'troll-small'
                   },
                   'geometry': {
                     'type': 'Point',

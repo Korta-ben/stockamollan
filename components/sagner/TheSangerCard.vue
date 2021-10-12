@@ -18,15 +18,15 @@
 <!--    </NuxtLink>-->
 
   <NuxtLink :to="{ name: 'sagner-slug', params: { slug: story.slug } }"
-            class="rounded-2xl bg-stLightGreen w-full h-80 flex max-w-sm md:max-w-md lg:w-1/2">
+            class="rounded-2xl bg-stLightGreen w-full h-80 flex  lg:w-5/12 justify-between">
 
     <div
-      class="w-1/2 bg-cover bg-center rounded-l-2xl"
+      class="w-5/12 bg-cover bg-center rounded-l-2xl"
       v-bind:style="{ 'background-image': 'url(' + story.acf.header_image + ')' }">
 
     </div>
 
-    <div class=" w-1/2  flex flex-col justify-center content-center items-center ">
+    <div class=" w-7/12  flex flex-col justify-center content-center items-center ">
       <h2 v-html="story.title.rendered " class=" pb-5 text-xl font-medium break-all text-center"></h2>
               <div class="flex  justify-center items-center">
                 <span  class="bg-stBrown tipIcon inline-block  w-5 h-5 mr-1.5 "> </span>

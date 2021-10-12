@@ -6,7 +6,7 @@
 
           <div class="half-circle fixed md:bg-stGreen bg-transparent ">
             <NuxtLink to="/" >
-                            <img src="~/assets/images/logo.svg" alt="STOCKAMÖLLAN" class="site-logo ease-in-out sm:w-12 z-40">
+              <img src="~/assets/images/logo.svg" alt="STOCKAMÖLLAN" class="site-logo ease-in-out sm:w-12 z-40">
             </NuxtLink>
           </div>
 
@@ -15,11 +15,11 @@
           <div  class=" inline text-stCream  lg:hidden flex flex-row justify-end items-center">
 
 
-              <NuxtLink to="/vandringsleder/map" class="flex pushable ">
-                  <span  class="accessibility-icon  map-alternative bg-stCream ">
+            <NuxtLink to="/vandringsleder/map" class="flex bg-stLightGreen text-stGreen py-2 px-3">
+                  <span  class="accessibility-icon  map-alternative bg-stGreen ">
 
                   </span>Karta
-              </NuxtLink>
+            </NuxtLink>
 
 
 
@@ -51,7 +51,7 @@
 
 
 
-          <ul  class="animate-fade-in-down lg:flex items-center hidden gap-x-3.5"
+          <ul  class="animate-fade-in-down lg:flex items-center hidden "
               >
             <li v-for="(item, i) in menuItems" :key="i"
                 class="align-top text-right  font-semibold text-lg text-stCream lg:inline lg:px-2">
@@ -62,8 +62,8 @@
             </li>
             <li  class="align-top text-right  font-semibold text-lg text-stCream lg:inline lg:px-2 hidden">
 
-                <NuxtLink to="/vandringsleder/map" class="flex pushable">
-                  <span  class="accessibility-icon  map-alternative bg-stCream ">
+                <NuxtLink to="/vandringsleder/map" class="flex bg-stLightGreen text-stGreen py-2 px-3">
+                  <span  class="accessibility-icon  map-alternative bg-stGreen ">
 
                   </span>Karta
               </NuxtLink>

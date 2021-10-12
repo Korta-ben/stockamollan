@@ -1,6 +1,6 @@
 <template>
   <main class="py-48 siteMaxWidth xl:px-36 lg:px-28 mb-48">
-    <h1 class=" lora font-medium text-3xl text-center px-12 pb-4">Sevärhetern i Stockamöllan</h1>
+    <h1 class=" lora font-medium text-3xl text-center px-12 pb-4">Sevärdheter i Stockamöllan</h1>
     <div class="max-w-2xl mx-auto text-center px-5">
       <p>
         Stockamöllan är rik på både kultur och historia. Kungligheter, arbetare och snapphanar har varit en del av platsen i flera hundra år. Här finns en lista över sevärdheter i och i närheten av Stockamöllan. Både längs med vandringslederna och strax utanför.      </p>
