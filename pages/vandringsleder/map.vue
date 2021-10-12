@@ -158,7 +158,7 @@ export default {
                       landmark.slug +'"><b>' +
                       landmark.title.rendered+
                       '</b></a> here!'  ,
-                    'icon': landmark.type === "sevardheter"? 'landmarks':'troll-small'
+                    'icon': landmark.type === "sevardheter"? 'landmarks':'troll-stories'
                   },
                   'geometry': {
                     'type': 'Point',
