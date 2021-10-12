@@ -9,7 +9,7 @@
           <img src="~/assets/images/distance.svg"  class="inline-block">
         CA {{ trailInfo.acf.distance }} KM
       </span>
-      <div>|</div>
+      <div v-if="trailInfo.acf.accessibility.length">|</div>
       <ul class="flex gap-x-3.5 ">
         <li  v-for="icon in trailInfo.acf.accessibility">
           <span class="accessibility-icon bg-stBrown" :class="icon"></span>
