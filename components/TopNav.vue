@@ -15,7 +15,7 @@
           <div  class=" inline text-stCream  lg:hidden flex flex-row justify-end items-center">
 
 
-            <NuxtLink to="/vandringsleder/map" class="flex bg-stLightGreen text-stGreen py-2 px-3">
+            <NuxtLink to="/vandringsleder/map" class="flex bg-stLightGreen text-stGreen py-2  px-3">
                   <span  class="accessibility-icon  map-alternative bg-stGreen ">
 
                   </span>Karta
@@ -62,7 +62,7 @@
             </li>
             <li  class="align-top text-right  font-semibold text-lg text-stCream lg:inline lg:px-2 hidden">
 
-                <NuxtLink to="/vandringsleder/map" class="flex bg-stLightGreen text-stGreen py-2 px-3">
+                <NuxtLink to="/vandringsleder/map" class="flex bg-stLightGreen text-stGreen py-2 pl-3 pr-5">
                   <span  class="accessibility-icon  map-alternative bg-stGreen ">
 
                   </span>Karta

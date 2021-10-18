@@ -38,6 +38,7 @@
         </div>
       </VueSlickCarousel>
 
+
       <NuxtLink
         to="/sevardheter"
         class=" w-48 font-semibold self-center text-lg text-stGreen mt-10 border-2 border-stGreen text-center py-4">

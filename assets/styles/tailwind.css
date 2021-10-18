@@ -137,8 +137,8 @@ div.navicon{
 
 
 .map-alternative {
-  mask-image: url('~/assets/images/map-2.svg');
-  -webkit-mask-image: url('~/assets/images/map-2.svg');
+  mask-image: url('~/assets/images/map-icon.svg');
+  -webkit-mask-image: url('~/assets/images/map-icon.svg');
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   /*background-image: url('~/assets/images/stroller.svg');*/

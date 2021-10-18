@@ -1,9 +1,9 @@
 <template>
   <div class="px-7">
     <div class="flex gap-8 items-center justify-around flex-col-reverse md:flex-row">
-      <img :src="pageHeader.header_image" class="w-1/2">
+      <img :src="pageHeader.header_image" class="md:w-1/2 w-full">
       <div>
-        <h1 class="pt-20 pb-10 text-center lora font-medium text-3xl" v-html="pageHeader.title"></h1>
+        <h1 class="pt-20 pb-5 text-center lora font-medium text-3xl" v-html="pageHeader.title"></h1>
         <p class="text-center text-sm" v-html="pageHeader.intro"></p>
         <TheSagneRouteDetails :routeDetails="pageHeader.vandringslederna[0].acf"/>
         <div v-html="pageHeader.introduction"></div>
