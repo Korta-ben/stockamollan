@@ -20,7 +20,9 @@
             <span
               class="circle-route-icon w-4 h-4 mr-4  rounded-full inline-block border-trlYellow"
               :class="trail.acf.colour.value"> </span>
-            <span class="route-name hidden md:inline-block">{{ trail.acf.colour.label }} slinga</span>
+            <span class="route-name hidden md:inline-block">{{ trail.acf.colour.label }} slinga <br>
+              <span class="text-sm route-name" >{{ trail.title.rendered }}</span>
+            </span>
           </label>
         </li>
 
@@ -236,5 +238,7 @@ export default {
   padding:2px 5px;
   font-weight: bold;
 }
-
+.route-name{
+  opacity: 0.8;
+}
 </style>
