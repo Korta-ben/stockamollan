@@ -53,6 +53,19 @@
 <script>
 
 export default {
+  head() {
+    return {
+      title: "Sevärdheter i Stockamöllan",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Vandringsleder'
+        }
+      ]
+    }
+  },
+
   data() {
     return {
       trails:this.$store.getters.getHikingTrails,
