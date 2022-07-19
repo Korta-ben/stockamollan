@@ -1,6 +1,6 @@
 <template>
   <main class="py-48 siteMaxWidth xl:px-36 lg:px-28 ">
-    <h1 class=" lora font-medium text-3xl text-center px-12 pb-14">Sevärheterna i Stockamöllan</h1>
+    <h1 class=" lora font-medium text-3xl text-center px-12 pb-14">Sevärdheter i Stockamöllan</h1>
 
     <section class="p-7 lg:py-7">
       <NuxtLink v-for="landmark in landmarks" :key="landmark.id"
@@ -13,13 +13,13 @@
               <img class="rounded-t-xl object-cover h-auto lg:rounded-tr-none lg:rounded-bl-xl"
                    :src="landmark.acf.header_image">
             </div >
-            <div class=" pt-10 px-7 lg:px-24 lg:w-1/3 lg:py-5 lg:flex lg:flex-col " >
+            <div class=" pt-10 px-7 lg:pl-24 lg:w-1/3 lg:py-5 lg:flex lg:flex-col " >
               <h3 class="font-medium text" v-html="landmark.post_title"></h3>
               <TheLandmarkRouteInfo v-if="landmark.acf.vandringslederna" :vandringslederna="landmark.acf.vandringslederna"/>
               <div class="flex mb-3 lg:pt-3 lg:pb-0 py-3 mt-6 mb-auto items-center -ml-4">
                 <span class="accessibility-icon distance bg-stGreen flex-shrink-0">
                 </span>
-                        <span class="text-sm text-stGreen  font-medium leading-4">CA {{ landmark.acf.distance }} KM</span>
+                        <span class="text-sm text-stGreen  font-medium leading-4 flex-shrink-0">CA {{ landmark.acf.distance }} KM</span>
                         <ul class="flex "  >
                           <li  v-for="icon in landmark.acf.accessibility" :key="icon.id"
                                class="pt-1">
